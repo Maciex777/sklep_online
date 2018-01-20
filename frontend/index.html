@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
 	
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet"> 
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/font-awesome.css">
 	<link rel="stylesheet" href="./css/styles.css">
@@ -14,32 +15,60 @@
 	<header>
 		<div class="container-fluid mb-5">
 			<div class="row pt-2 text-center text-md-right fade-in-down">
-
-				<div class="log-nav col-md-12 text-center text-md-right">
+				<div class="col-md-3 text-center">
+					<a href="./index.html" class="logo"><img class="img-fluid pt-3" src="./img/logo.bmp" alt="logo"></a>
+				</div>
+				<div class="log-nav col-md-9 text-center text-md-right">
 					<div class="col-md-10   float-left text-md-right">
 					<a href="./login.html" class="pr-2"><i class="fa fa-user"></i> Zaloguj się</a>
-					<a href="./register.html"><i class="fa fa-user-plus"></i> Utwórz konto</a>
+					<!--  <a href="./register.html"><i class="fa fa-user-plus"></i> Utwórz konto</a> -->
 					</div>
-					<div class="form-group col-md-2 float-left text-md-right mt-4">
+					<div class="form-group col-md-2 float-left text-md-right mt-3">
 						<input class="form-control" type="search" value="Szukaj produktów">
 					</div>
 				</div>
 				
 			</div>
 			<div class="row fade-in-down">
-				<div class="col-md-3 text-center">
-					<a href="./index.html" class="logo"><img class="img-fluid" src="./img/logo.png" alt="logo"></a>
-				</div>
-				<div class="col-md-9 pt-5">
+				<div class="col-md-8">
 					<nav>
-						<ul class="nav text-left float-left">
-							<li class="nav-item" ><a href="./pan.html" class="nav-link">Pan</a></li>
-							<li class="nav-item"><a href="./pani.html" class="nav-link">Pani</a></li>
+						<ul class="nav text-center float-right">
+							<li class="nav-item dropdown" >
+								<a href="./pani.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
+										<ul>
+											<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+										</ul>
+									<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a href="./pan.html" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="#">Pozycja 1</a></li>
+										<ul>
+											<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+										</ul>
+									<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+								</ul>
+							</li>
 							<li class="nav-item"><a href="./wyprzedaże.html" class="nav-link">Wyprzedaże</a></li>
 							<li class="nav-item"><a href="./o sklepie.html" class="nav-link">O sklepie</a></li>
 							<li class="nav-item"><a href="./kontakt.html" class="nav-link">Kontakt</a></li>
 						</ul>
 					</nav>
+				</div>
+				<div class="col-md-4">
 					<a class="basket float-right pr-5" href="" title="koszyk">
 						<span class="amount">0 zł</span>
 						<span class="count"></span>
