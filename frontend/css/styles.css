@@ -27,3 +27,16 @@ header .logo img{
 header .logo img:hover {
 	opacity: 1;
 }
+
+.log-nav{
+	font-size:1.2em;
+	position:absolute;
+	line-height:4;
+}
+
+.log-nav .fa-user{
+	font-size:2.2em;
+	position:absolute;
+	line-height:1.7;
+	right:278px;
+}
