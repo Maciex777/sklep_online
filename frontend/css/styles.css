@@ -1,20 +1,28 @@
-ul.nav{
-	padding-top:70px;
+header{
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.basket{
+	font-size:1.5em;
+}
+
+.basket .fa-shopping-basket{
+	font-size:1.8em;
 }
 
 /*Kolory tekstu i linków w nagłówku*/
 header, header a {
-	color: #000;
+	color: #444;
 }
 
 header a:hover, header .active a {
-	color: #eee;
+	color: #838383;
 	text-decoration: none;
 }
 
 /*Większa czcionka w menu głównym*/
 header .nav {
-	font-size: 160%;
+	font-size: 150%;
 	text-transform:uppercase;
 }
 
@@ -26,4 +34,17 @@ header .logo img{
 
 header .logo img:hover {
 	opacity: 1;
+}
+
+.log-nav{
+	font-size:1.2em;
+	line-height:4;
+}
+
+/* ikonka logowania */
+.log-nav .fa-user{
+	font-size:2.2em;
+	position:absolute;
+	line-height:1.7;
+	right:128px;
 }
