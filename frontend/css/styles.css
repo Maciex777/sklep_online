@@ -2,6 +2,15 @@ ul.nav{
 	padding-top:70px;
 }
 
+.basket{
+	padding-top:70px;
+	font-size:1.5em;
+}
+
+.basket .fa-shopping-basket{
+	font-size:1.8em;
+}
+
 /*Kolory tekstu i linków w nagłówku*/
 header, header a {
 	color: #000;
@@ -30,7 +39,6 @@ header .logo img:hover {
 
 .log-nav{
 	font-size:1.2em;
-	position:absolute;
 	line-height:4;
 }
 
