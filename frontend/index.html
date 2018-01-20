@@ -16,15 +16,16 @@
 		<div class="container-fluid mb-5">
 			<div class="row pt-2 text-center text-md-right fade-in-down">
 				<div class="col-md-3 text-center">
-					<a href="./index.html" class="logo"><img class="img-fluid pt-3" src="./img/logo.bmp" alt="logo"></a>
+					<a href="./index.html" class="logo"><img class="img-fluid pt-3" src="./img/logo.png" alt="logo"></a>
 				</div>
 				<div class="log-nav col-md-9 text-center text-md-right">
-					<div class="col-md-10   float-left text-md-right">
+					<div class="col-md-9   float-left text-md-right">
 					<a href="./login.html" class="pr-2"><i class="fa fa-user"></i> Zaloguj się</a>
 					<!--  <a href="./register.html"><i class="fa fa-user-plus"></i> Utwórz konto</a> -->
 					</div>
-					<div class="form-group col-md-2 float-left text-md-right mt-3">
-						<input class="form-control" type="search" value="Szukaj produktów">
+					<div class="input-group col-md-3 float-left text-md-right mt-3">
+						<div class="input-group-addon" ><i class="fa fa-search"></i></div>
+						<input class="form-control" type="search" placeholder="Szukaj produktów" id="search-field">
 					</div>
 				</div>
 				
@@ -70,7 +71,7 @@
 				</div>
 				<div class="col-md-4">
 					<a class="basket float-right pr-5" href="" title="koszyk">
-						<span class="amount">0 zł</span>
+						<span class="amount pr-4">0 zł</span>
 						<span class="count"></span>
 						<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 					</a>
@@ -82,11 +83,18 @@
 	<!-- Główna treść strony -->
 	<main>
 		<div class="container">
-			
+			<div id="pani" class="text-left">
+			<div><a href="./pani.html"><img class="alignleft size-full" src="./img/baba.png" alt="" width="355" height="440" /></a></div>
+			<div><a class="main-buttons" href="./pani.html">Pani</a></div>
+			</div>
+
+			<div id="pan" style="text-align: right;"><div><a href="./pan.html"><img class="alignright size-full" src="./img/dziad.png" alt="" width="357" height="458" /></a></div>
+			<div><a class="main-buttons" href="./pan.html">Pan</a></div>
+			</div>
 		</div>
 	</main> <!-- koniec głównej treści strony -->
 	
-	<!-- Stopka razem z formularzem zapisu do newsletter-a -->
+	<!-- Stopka -->
 	<footer>
 
 	</footer> <!-- koniec stopki -->

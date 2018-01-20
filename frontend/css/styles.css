@@ -1,3 +1,7 @@
+body{
+		background-color:ghostwhite;
+}
+
 header{
 	font-family: 'Nunito Sans', sans-serif;
 }
@@ -47,4 +51,44 @@ header .logo img:hover {
 	position:absolute;
 	line-height:1.7;
 	right:128px;
+}
+
+#search-field{
+	background-color: #f2f2f2;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+#pan, #pani{
+	display: block;
+	list-style: none;
+	margin-top:55px;
+}
+#pani{
+	padding-top:18px;
+	float:left;
+}
+#pan{
+	float:right;
+}
+.main-buttons{
+	text-align:center;
+	display: block;
+	clear:both;
+	font-family:'Open Sans';
+	font-weight:600;
+	font-size:30px;
+	color:#303030;
+	background-color:#fff;
+	border:2px solid #303030;
+	padding:5px 10px;
+	border-radius:5px;
+	-webkit-box-shadow: 0px 10px 15px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 15px -1px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 15px -1px rgba(0,0,0,0.75);
+}
+.main-buttons:hover{
+	text-decoration:none;
+	color:#fff;
+	background-color:#2E1F27;
 }
