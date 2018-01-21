@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Halka</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+	
+	<header>
+		<div class="container-fluid mb-5">
+			<div class="row pt-2 text-center text-md-right fade-in-down">
+				<div class="col-md-3 text-center">
+					<a href="./index.html" class="logo"><img class="img-fluid pt-3" src="./img/logo.png" alt="logo"></a>
+				</div>
+				<div class="log-nav col-md-9 text-center text-md-right">
+					<div class="col-md-9   float-left text-md-right">
+					<a href="./login.html" class="pr-2"><i class="fa fa-user"></i> Zaloguj się</a>
+					<!--  <a href="./register.html"><i class="fa fa-user-plus"></i> Utwórz konto</a> -->
+					</div>
+					<div class="input-group col-md-3 float-left text-md-right mt-3">
+						<div class="input-group-addon" ><i class="fa fa-search"></i></div>
+						<input class="form-control" type="search" placeholder="Szukaj produktów" id="search-field">
+					</div>
+				</div>
+				
+			</div>
+			<div class="row fade-in-down">
+				<div class="col-md-8">
+					<nav>
+						<ul class="nav text-center float-right">
+							<li class="nav-item dropdown" >
+								<a href="./pani.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
+										<ul>
+											<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+										</ul>
+									<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a href="./pan.html" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="#">Pozycja 1</a></li>
+										<ul>
+											<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+											<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+										</ul>
+									<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+									<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+								</ul>
+							</li>
+							<!-- <li class="nav-item"><a href="./wyprzedaże.html" class="nav-link">Wyprzedaże</a></li> -->
+							<li class="nav-item"><a href="./about.html" class="nav-link">O sklepie</a></li>
+							<li class="nav-item"><a href="./kontakt.html" class="nav-link">Kontakt</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-md-4">
+					<a class="basket float-right pr-5"  data-toggle="dropdown" href="" title="koszyk">
+						<span class="amount pr-4">0 zł</span>
+						<span class="count"></span>
+						<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
+						<div class="dropdown-divider"></div>
+						<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+						<div class="dropdown-divider"></div>
+						<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+						<div class="dropdown-divider"></div>
+						<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+						<div class="dropdown-divider"></div>
+						<li><p class="dropdown-item" href="#">Kwota:</p></li>
+						<div class="dropdown-divider"></div>
+						<li><a class="dropdown-item" href="#">Zobacz koszyk</a></li>
+						<li><a class="dropdown-item" href="#">Zamówienie</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header> <!-- koniec nagłówka -->
+	
+	<!-- Główna treść strony -->
+	<main>
+    <div class="container">
+			<!-- Cart item -->
+			<div>
+				<div class="wrap-table-shopping-cart">
+					<table class="table-shopping-cart">
+						<tr class="table-head">
+							<th class="column-1"></th>
+							<th class="column-2">Produkt</th>
+							<th class="column-3">Cena</th>
+							<th class="column-4">Ilość</th>
+							<th class="column-5">Suma</th>
+						</tr>
+
+						<tr class="table-row">
+							<td class="column-1">
+								<div class="cart-img-product">
+									<img src="images/item-10.jpg" alt="IMG-PRODUCT">
+								</div>
+							</td>
+							<td class="column-2">Men Tshirt</td>
+							<td class="column-3">36.00</td>
+							<td class="column-4">
+								<div>
+									<button>
+										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+									</button>
+
+									<input class="t-center num-product" type="number" name="num-product1" value="1">
+
+									<button>
+										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+									</button>
+								</div>
+							</td>
+							<td class="column-5">36.00 zł</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+			<!-- Total -->
+			<div>
+				<h5>
+					Podsumowanie
+				</h5>
+
+				<!--  -->
+				<div>
+					<span>
+						Kwota:
+					</span>
+
+					<span>
+						39.00 zł
+					</span>
+				</div>
+
+				<!--  -->
+				<div>
+					<span>
+						Wysyłka:
+					</span>
+
+					<div>
+						<p>
+							Dowóz 15 zł	</p>
+						<p>
+							Odbiór osobisty</p>
+					</div>
+				</div>
+
+				<!--  -->
+				<div>
+					<span>
+						Suma:
+					</span>
+
+					<span>
+						39.00 zł
+					</span>
+				</div>
+
+				<div>
+					<!-- Button -->
+					<button>
+						Przejdź do kasy
+					</button>
+				</div>
+			</div>
+		</div>
+	</main> <!-- koniec głównej treści strony -->
+	
+	<!-- Stopka -->
+	<footer>
+		<div class="container">
+			<div class="row col-12 pb-3 pt-5 clearfix">
+				<div class="col-12 text-right">
+					<p>&copy; Halka 2018</p>
+				</div>	
+			</div>
+		</div>
+	</footer> <!-- koniec stopki -->
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
