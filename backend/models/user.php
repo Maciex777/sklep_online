@@ -4,12 +4,13 @@ class UserModel extends Model{
 		// Sanitize POST
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-		$password = md5($post['password']);
+		$password = password_hash($post['password'], PASSWORD_DEFAULT);
 
 		if($post['submit']){
 			// Insert into MySQL
-			$this->query('INSERT INTO users (name, email, password) VALUES(:name, :email, :password)');
+			$this->query('INSERT INTO users (name, surname, email, password) VALUES(:name, :email, :password)');
 			$this->bind(':name', $post['name']);
+			$this->bind(':surname', $post['surname']);
 			$this->bind(':email', $post['email']);
 			$this->bind(':password', $password);
 			$this->execute();
@@ -26,14 +27,14 @@ class UserModel extends Model{
 		// Sanitize POST
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
 
-		$password = md5($post['password']);
+		$password = password_hash($post['password'], PASSWORD_DEFAULT);
 
 		if($post['submit']){
 			// Compare Login
 			$this->query('SELECT * FROM users WHERE email = :email AND password = :password');
 			$this->bind(':email', $post['email']);
 			$this->bind(':password', $password);
-			
+
 			$row = $this->single();
 
 			if($row){
