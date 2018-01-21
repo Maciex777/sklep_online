@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
 	
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
 	<link rel="stylesheet" href="./css/font-awesome.css">
 	<link rel="stylesheet" href="./css/styles.css">
@@ -69,8 +70,8 @@
 						</ul>
 					</nav>
 				</div>
-				<div class="col-md-4 dropdown-basket">
-					<a class="basket float-right pr-5"  data-toggle="dropdown" href="./koszyk.html" title="koszyk">
+				<div class="col-md-4">
+					<a class="basket float-right pr-5"  data-toggle="dropdown" href="" title="koszyk">
 						<span class="amount pr-4">0 zł</span>
 						<span class="count"></span>
 						<i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -86,7 +87,7 @@
 						<div class="dropdown-divider"></div>
 						<li><p class="dropdown-item" href="#">Kwota:</p></li>
 						<div class="dropdown-divider"></div>
-						<li><a class="dropdown-item" href="./koszyk.html">Zobacz koszyk</a></li>
+						<li><a class="dropdown-item" href="#">Zobacz koszyk</a></li>
 						<li><a class="dropdown-item" href="#">Zamówienie</a></li>
 					</ul>
 				</div>
@@ -97,27 +98,96 @@
 	<!-- Główna treść strony -->
 	<main>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 mx-auto">
-                <div class="block">
-                    <h2 class="text-center pt-4 pb-4">Zaloguj się do sklepu</h2>
-                    
-                    <form class="text-left clearfix mt-50" action="index.html" >
-                        <div class="form-group">
-                            <input type="email" class="form-control"  placeholder="E-mail">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Hasło">
-                        </div>
-                        <button type="submit" class="btn btn-main" >Zaloguj się</button>
-                        
-                    </form>
-                    <p class="mt-4">Jesteś nowy na tej stronie?<a href="signup.html"> Utwórz konto</a></p>
-                    <p><a href="forget-password.html"> Zapomniałeś hasła?</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+			<!-- Cart item -->
+			<div>
+				<div class="wrap-table-shopping-cart">
+					<table class="table-shopping-cart">
+						<tr class="table-head">
+							<th class="column-1"></th>
+							<th class="column-2">Produkt</th>
+							<th class="column-3">Cena</th>
+							<th class="column-4">Ilość</th>
+							<th class="column-5">Suma</th>
+						</tr>
+
+						<tr class="table-row">
+							<td class="column-1">
+								<div class="cart-img-product">
+									<img src="images/item-10.jpg" alt="IMG-PRODUCT">
+								</div>
+							</td>
+							<td class="column-2">Men Tshirt</td>
+							<td class="column-3">36.00</td>
+							<td class="column-4">
+								<div>
+									<button>
+										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+									</button>
+
+									<input class="t-center num-product" type="number" name="num-product1" value="1">
+
+									<button>
+										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+									</button>
+								</div>
+							</td>
+							<td class="column-5">36.00 zł</td>
+						</tr>
+
+					</table>
+				</div>
+			</div>
+
+			<!-- Total -->
+			<div>
+				<h5>
+					Podsumowanie
+				</h5>
+
+				<!--  -->
+				<div>
+					<span>
+						Kwota:
+					</span>
+
+					<span>
+						39.00 zł
+					</span>
+				</div>
+
+				<!--  -->
+				<div>
+					<span>
+						Wysyłka:
+					</span>
+
+					<div>
+						<p>
+							Dowóz 15 zł	</p>
+						<p>
+							Odbiór osobisty</p>
+					</div>
+				</div>
+
+				<!--  -->
+				<div>
+					<span>
+						Suma:
+					</span>
+
+					<span>
+						39.00 zł
+					</span>
+				</div>
+
+				<div>
+					<!-- Button -->
+					<button>
+						Przejdź do kasy
+					</button>
+				</div>
+			</div>
+		</div>
 	</main> <!-- koniec głównej treści strony -->
 	
 	<!-- Stopka -->
