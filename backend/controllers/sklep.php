@@ -12,6 +12,11 @@ protected function produkt(){
   $this->returnView($viewmodel->produkt(), true);
 }
 
+protected function produkty(){
+  $viewmodel = new SklepModel();
+  $this->returnView($viewmodel->produkty(), true);
+}
+
 }
 
  ?>

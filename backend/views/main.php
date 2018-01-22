@@ -45,7 +45,7 @@
 					<nav>
 						<ul class="nav text-center float-right">
 							<li class="nav-item dropdown" >
-								<a href="<?php echo ROOT_URL; ?>pani" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
+								<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
 									<ul>
@@ -59,7 +59,7 @@
 								</ul>
 							</li>
 							<li class="nav-item dropdown">
-								<a href="<?php echo ROOT_URL; ?>pan" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
+								<a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
 								<ul class="dropdown-menu">
 									<li>
 										<a class="dropdown-item" href="#">Pozycja 1</a></li>
