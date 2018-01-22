@@ -3,6 +3,87 @@ body{
 	font-family: 'Nunito Sans', sans-serif;
 }
 
+/* navbar */
+
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+ 
+header{
+		border-bottom:1px solid #000;
+}
+
+a:hover{
+	text-decoration:none;
+}
+	
+
+/* SLIDER */
+
+.main_slider{
+	width: 100%;
+	height: 700px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.main_slider_content{
+	width: 60%;
+}
+.main_slider_content h6{
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 29px;
+}
+.main_slider_content h1{
+	font-size: 4em;
+	font-weight: 400;
+	line-height: 1;
+}
+.red_button
+{
+	display: -webkit-inline-box;
+	display: -moz-inline-box;
+	display: -ms-inline-flexbox;
+	display: -webkit-inline-flex;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: 50px;
+	background: #0d0a0b;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.red_button:hover
+{
+	background: #444; !important;
+}
+.red_button a
+{
+	display: block;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 900;
+	text-align: center;
+	line-height: 40px;
+	width: 100%;
+}
+.shop_now_button
+{
+	padding:15px;
+	margin-top: 32px;
+}
+
 /*
 nav ul li:first-child a::after, nav ul li:nth-child(2) a::after{
 	font-family:FontAwesome;
@@ -50,14 +131,15 @@ header .logo img:hover {
 
 .log-nav{
 	font-size:1.2em;
-	line-height:4;
+	line-height:2;
+	padding-top:30px;
 }
 
 /* ikonka logowania */
 .log-nav .fa-user{
 	font-size:2.2em;
 	position:absolute;
-	line-height:1.7;
+	line-height:.8;
 	right:128px;
 }
 
@@ -79,12 +161,35 @@ header .logo img:hover {
 #pan{
 	float:right;
 }
+/*
 #pani > div > a >img:hover, #pan > div > a >img:hover {
     -webkit-filter: contrast(120%);
     filter: contrast(120%);
-	width:105%;
-	height:105%;
+	width:calc(100% + 5px);
+	height:calc(100% +5 px);
 }
+@media only screen and (max-width: 1400px) {
+	#pani > div > a >img{
+		width:310px;
+		margin-left:110px
+}
+	#pan > div > a >img{
+		width:310px;
+		padding-top:9px;
+		margin-right:110px;
+}
+}
+
+@media only screen and (max-width: 1000px) {
+	#panii > div > a >img{
+		width:200px;
+	}
+	#pani > div > a >img{
+		width:200px;
+		padding-top:9px;
+	}
+}
+*/
 
 .main-buttons{
 	text-align:center;
