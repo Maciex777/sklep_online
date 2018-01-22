@@ -12,10 +12,12 @@ require('classes/Model.php');
 require('controllers/home.php');
 require('controllers/shares.php');
 require('controllers/users.php');
+require('controllers/sklep.php');
 
 require('models/home.php');
 require('models/share.php');
 require('models/user.php');
+require('models/sklep.php');
 
 $bootstrap = new Bootstrap($_GET);
 $controller = $bootstrap->createController();

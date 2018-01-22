@@ -23,15 +23,14 @@
             <div class="col-md-6 mx-auto">
                 <div class="block">
                     <h2 class="text-center pt-4 pb-4">Zaloguj się do sklepu</h2>
-
-                    <form class="text-left clearfix mt-50" action="<?php echo ROOT_URL; ?>" >
+                    <form class="text-left clearfix mt-50" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                         <div class="form-group">
-                            <input type="email" class="form-control"  placeholder="E-mail">
+                            <input type="email" name="email" class="form-control"  placeholder="E-mail">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Hasło">
+                            <input type="password" name="password" class="form-control" placeholder="Hasło">
                         </div>
-                        <button type="submit" class="btn btn-main" >Zaloguj się</button>
+                        <button type="submit" name="submit" class="btn btn-main" value="login">Zaloguj się</button>
 
                     </form>
                     <p class="mt-4">Jesteś nowy na tej stronie?<a href="<?php echo ROOT_URL; ?>signin"> Utwórz konto</a></p>

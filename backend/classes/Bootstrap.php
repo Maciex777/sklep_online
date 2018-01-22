@@ -3,9 +3,13 @@ class Bootstrap{
 	private $controller;
 	private $action;
 	private $request;
+	public $id;
 
 	public function __construct($request){
 		$this->request = $request;
+		if (isset($this->request['id']) && $this->request['id'] != null && $this->request['id'] != 0){
+		$this->id = $this->request['id'];
+	}
 		if($this->request['controller'] == ""){
 			$this->controller = 'home';
 		} else {
