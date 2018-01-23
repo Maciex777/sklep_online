@@ -6,15 +6,16 @@
 
       <div class="col-lg-3">
 
-        <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
         <div class="pt-5">
-          <img src="./img/dziad.png" alt="" class="rotate-object" width="267" height="368"/>
+          <? if ($_SESSION['category'] === "Pan"){?>
+        <img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object" width="267" height="368"/>
+      <?php }else{?>
+        <img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/>
+      <?php }?>
         </div>
-        <div class="list-group">
-          <a href="#" class="list-group-item">Category 1</a>
-          <a href="#" class="list-group-item">Category 2</a>
-          <a href="#" class="list-group-item">Category 3</a>
-        </div>
+        <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
+
+
 
       </div>
       <!-- /.col-lg-3 -->
@@ -50,31 +51,20 @@
 
         <div class="row">
           <?php $i = 0;
-          foreach($viewmodel as $cat){
+          foreach($viewmodel as $product){
             $i++;
-            $category = ucfirst(str_replace('_',' ',$cat['category']));
-            ?>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card h-100">
-                <a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                <div class="card-body">
-                  <h4 class="card-title">
-                    <a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>"> <?php echo $category; ?></a>
-                  </h4>
 
-                  <p class="card-text"> <?php echo $cat['category_description']; ?></p>
-                </div>
-              </div>
-            </div>
+            ?>
+
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card h-100">
                 <img class="card-img-top" src="http://placehold.it/500x325" alt="">
                 <div class="card-body">
-                  <h4 class="card-title">Card title</h4>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+                  <h4 class="card-title"><?php echo $product['product_name']; ?></h4>
+                  <!-- <p class="card-text"><?php //echo $product['product_description']; ?></p> -->
                 </div>
                 <div class="card-footer">
-                  <a href="<?php echo ROOT_URL;?>sklep/produkt/<? " class="btn btn-primary">Zobacz</a>
+                  <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="btn btn-primary">Zobacz</a>
                 </div>
               </div>
             </div>
