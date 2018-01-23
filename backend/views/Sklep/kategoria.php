@@ -6,7 +6,11 @@
 
 				<div class="col-lg-3">
           <div class="pt-5">
-          <img src="./img/dziad.png" alt="" class="rotate-object" width="267" height="368"/>
+						<? if ($_SESSION['category'] === "Pan"){?>
+          <img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object" width="267" height="368"/>
+				<?php }else{?>
+					<img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/>
+				<?php }?>
           </div>
 				  <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
 
@@ -52,10 +56,10 @@
               ?>
 					<div class="col-lg-4 col-md-6 mb-4">
 					  <div class="card h-100">
-						<a href="<?php echo ROOT_URL;?>/sklep/produkty/<?php echo $cat['id'];?>"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+						<a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
 						<div class="card-body">
 						  <h4 class="card-title">
-							<a href="<?php echo ROOT_URL;?>/sklep/produkty/<?php echo $cat['id'];?>"> <?php echo $category; ?></a>
+							<a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>"> <?php echo $category; ?></a>
 						  </h4>
 
 						  <p class="card-text"> <?php echo $cat['category_description']; ?></p>

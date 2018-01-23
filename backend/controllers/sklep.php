@@ -8,7 +8,7 @@ protected function kategoria(){
 }
 
 protected function produkt(){
-  $viewmodel = new SklepMoel();
+  $viewmodel = new SklepModel();
   $this->returnView($viewmodel->produkt(), true);
 }
 
