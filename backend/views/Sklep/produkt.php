@@ -21,7 +21,7 @@
 		<div class="col-lg-9">
 
 		  <div class="card mt-4">
-			<img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+			<img class="card-img-top img-fluid" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="">
 			<div class="card-body">
 			  <h3 class="card-title"><?php echo $viewmodel['product_name']; ?></h3>
 			  <h4>Cena : <?php echo $viewmodel['product_cost']; ?> zł</h4>

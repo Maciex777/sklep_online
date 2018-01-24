@@ -46,7 +46,8 @@ class UserModel extends Model{
 				"surname" => $row['surname'],
 				"role" => $row['role'],
 				"registration_date" => $row['registration_date'],
-				"email"	=> $row['email']
+				"email"	=> $row['email'],
+				"phone_number" => $row['phone_number']
 			);
 
 			header('Location: '.ROOT_URL);

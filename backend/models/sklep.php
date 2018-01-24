@@ -88,6 +88,29 @@ class SklepModel extends Model {
     $products= $this->resultSet();
     return $products;
   }
+
+  public function koszyk(){
+    $items_in_cart = array();
+    $_SESSION['product_value'] = array();
+    $_SESSION['order_value'] = null;
+    if (isset($_SESSION['cart'])){
+    foreach ($_SESSION['cart'] as $id=>$count){
+    $this->query('SELECT * FROM products WHERE product_id = :id');
+    $this->bind(':id' , $id);
+    $product = $this->single();
+    array_push($items_in_cart,$product);
+
+    $_SESSION['order_value'] += ($product['product_cost']*$_SESSION['cart'][$product['product_id']]);
+    $_SESSION['product_value'][$product['product_id']] = $_SESSION['cart'][$product['product_id']]*$product['product_cost'];
+  }
+  return $items_in_cart;}
+}
+
+public function kasa(){
+
+
+  return;
+}
 }
 
 ?>

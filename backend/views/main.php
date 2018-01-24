@@ -80,7 +80,7 @@
 						</nav>
 					</div>
 					<div class="col-md-4">
-						<a class="basket float-right pr-5"  data-toggle="dropdown" href="" title="koszyk">
+						<a class="basket float-right pr-5"  data-toggle="dropdown" href="<?php echo ROOT_URL;?>sklep/koszyk" title="koszyk">
 							<span class="amount pr-4">0 zł</span>
 							<span class="count"></span>
 							<i class="fa fa-shopping-basket" aria-hidden="true"></i>
