@@ -15,17 +15,21 @@
       <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
 		</div>
 		<!-- /.col-lg-3 -->
+
 <?php //foreach ($viewmodel as $item) { ?>
+
 		<div class="col-lg-9">
 
 		  <div class="card mt-4">
-			<img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
+			<img class="card-img-top img-fluid" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="">
 			<div class="card-body">
+
 			  <h3 class="card-title"><?php echo $viewmodel['product_name']; ?>tutaj</h3>
 			  <h4>Cena produktu: <?php echo $viewmodel['product_cost']; ?> zł
 			  <br>
 			  Stan magazynowy: <?php echo $viewmodel['product_stock']; ?> sztuk</h4>
 			 
+
 			</div>
 		  </div>
 		  <!-- /.card -->
@@ -35,15 +39,26 @@
 			  Opis produktu
 			</div>
 			<div class="card-body">
-			  <?php echo $viewmodel['product_description']; ?>
+
+			  <p><?php echo $viewmodel['product_description']; ?></p>
+
 			  <hr>
-			  <a href="#" class="btn btn-success">Dodaj do koszyka</a>
+				<form action="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $viewmodel['product_id'];?>" method="post">
+
+				<input type="submit" name="cart_action" value="Dodaj do koszyka">
+				</form>
+				<?php //if (isset($_SESSION['cart'])){
+				//echo "<pre>";
+				//print_r($_SESSION['cart']);
+				//echo "</pre>";}?>
 			</div>
 		  </div>
 		  <!-- /.card -->
 
 		</div>
-  <?php // } ?>
+
+  <?php  //} ?>
+
 		<!-- /.col-lg-9 -->
 
 	  </div>

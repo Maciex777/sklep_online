@@ -92,9 +92,31 @@
 									</li>
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/about" class="nav-link">O sklepie</a></li>
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
-								</ul>
-							</div>
-						</nav>				
+
+							</ul>
+						</nav>
+					</div>
+					<div class="col-md-4">
+						<a class="basket float-right pr-5"  data-toggle="dropdown" href="<?php echo ROOT_URL;?>sklep/koszyk" title="koszyk">
+							<span class="amount pr-4">0 zł</span>
+							<span class="count"></span>
+							<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
+							<div class="dropdown-divider"></div>
+							<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+							<div class="dropdown-divider"></div>
+							<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+							<div class="dropdown-divider"></div>
+							<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+							<div class="dropdown-divider"></div>
+							<li><p class="dropdown-item" href="#">Kwota:</p></li>
+							<div class="dropdown-divider"></div>
+							<li><a class="dropdown-item" href="#">Zobacz koszyk</a></li>
+							<li><a class="dropdown-item" href="#">Zamówienie</a></li>
+						</ul>
+
 					</div>
 				</div>
 			</div>
