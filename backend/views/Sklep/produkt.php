@@ -15,33 +15,43 @@
       <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
 		</div>
 		<!-- /.col-lg-3 -->
-<?php foreach ($viewmodel as $item) { ?>
+<?php  //foreach ($viewmodel as $item) {
+
+  ?>
 		<div class="col-lg-9">
 
 		  <div class="card mt-4">
 			<img class="card-img-top img-fluid" src="http://placehold.it/900x400" alt="">
 			<div class="card-body">
-			  <h3 class="card-title"><?php $item['product_name'] ?>tutaj</h3>
-			  <h4>$24.99</h4>
-			  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+			  <h3 class="card-title"><?php echo $viewmodel['product_name']; ?></h3>
+			  <h4>Cena : <?php echo $viewmodel['product_cost']; ?> zł</h4>
+				<h4>Stan magazynowy: <?php echo $viewmodel['product_stock']; ?> sztuk</h4>
+
 			</div>
 		  </div>
 		  <!-- /.card -->
 
 		  <div class="card card-outline-secondary my-4">
 			<div class="card-header">
-			  Product Details
+			  Opis produktu
 			</div>
 			<div class="card-body">
-			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+			  <p><?php echo $viewmodel['product_description']; ?></p>
 			  <hr>
-			  <a href="#" class="btn btn-success">Dodaj do koszyka</a>
+				<form action="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $viewmodel['product_id'];?>" method="post">
+
+				<input type="submit" name="cart_action" value="Dodaj do koszyka">
+				</form>
+				<?php //if (isset($_SESSION['cart'])){
+				//echo "<pre>";
+				//print_r($_SESSION['cart']);
+				//echo "</pre>";}?>
 			</div>
 		  </div>
 		  <!-- /.card -->
 
 		</div>
-  <?php  } ?>
+  <?php  //} ?>
 		<!-- /.col-lg-9 -->
 
 	  </div>
