@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Halka</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/font-awesome.css">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+	
+<header>
+		<div class="container-fluid mb-2">
+			<div class="row pt-2 text-center text-md-right fade-in-down">
+				<div class="col-md-3 text-center">
+					<a href="./index.html" class="logo"><img class="img-fluid pt-3" src="./img/logo.png" alt="logo"></a>
+				</div>
+				<div class="col-md-9">
+					<div class="row log-nav col-md-12 text-center text-md-right">
+						<div class="col-md-9 float-left text-md-right">
+						<a href="./login.html" class="pr-2"><i class="fa fa-user"></i> Zaloguj się</a>
+						<!--  <a href="./register.html"><i class="fa fa-user-plus"></i> Utwórz konto</a> -->
+						</div>
+						<div class="col-md-3 dropdown-basket">
+							<a class="basket float-right pr-5"  data-toggle="dropdown" href="./koszyk.html" title="koszyk">
+								<span class="amount pr-4">0 zł</span>
+								<span class="count"></span>
+								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+								<div class="dropdown-divider"></div>
+								<li><p class="dropdown-item" href="#">Kwota:</p></li>
+								<div class="dropdown-divider"></div>
+								<li><a class="dropdown-item" href="./koszyk.html">Zobacz koszyk</a></li>
+								<li><a class="dropdown-item" href="./checkout.html">Zamówienie</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="row col-md-12 pb-3">
+						<nav>
+							<ul class="nav text-center float-right">
+								<li class="nav-item dropdown" >
+									<a href="./pani.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
+									<ul class="dropdown-menu">
+										<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
+											<ul>
+												<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+												<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+												<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+											</ul>
+										<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+										<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+										<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+									</ul>
+								</li>
+								<li class="nav-item dropdown">
+									<a href="./pan.html" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#">Pozycja 1</a></li>
+											<ul>
+												<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+												<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+												<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+											</ul>
+										<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
+										<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
+										<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
+									</ul>
+								</li>
+								<!-- <li class="nav-item"><a href="./wyprzedaże.html" class="nav-link">Wyprzedaże</a></li> -->
+								<li class="nav-item"><a href="./about.html" class="nav-link">O sklepie</a></li>
+								<li class="nav-item"><a href="./kontakt.html" class="nav-link">Kontakt</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header> <!-- koniec nagłówka -->
+	
+	<!-- Główna treść strony -->
+	<main>
+		<div class="container">
+		
+                <div class="col-md-9" id="checkout">
+
+                    <div class="box">
+                        <form method="post" action="checkout2.html">
+                            <h1>Zamówienie</h1>
+
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstname">Imię</label>
+                                            <input type="text" class="form-control" id="firstname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastname">Nazwisko</label>
+                                            <input type="text" class="form-control" id="lastname">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="city">Miasto</label>
+                                            <input type="text" class="form-control" id="city">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="street">Ulica</label>
+                                            <input type="text" class="form-control" id="street">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="mail-code">Kod pocztowy</label>
+                                            <input type="text" class="form-control" id="mail-code">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="country">Kraj</label>
+                                            <select class="form-control" id="country"></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="phone">Telefon</label>
+                                            <input type="text" class="form-control" id="phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">E-mail</label>
+                                            <input type="text" class="form-control" id="email">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.box -->
+          </div>
+                <!-- /.col-md-9 -->
+
+                <div class="col-md-4">
+
+					<div class="card">
+						<h5 class="card-header">Podsumowanie zamówienia</h5>
+						<div class="card-body">
+							<!--  -->
+							<div>
+								<span><strong>Kwota:</strong></span>
+
+								<span>
+									39.00 zł
+								</span>
+							</div>
+
+							<div>
+								<span><strong>Wysyłka:</strong></span>
+
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="Dowóz" checked>
+										Dowóz 15 zł
+									</label>
+								</div>
+
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="Odbiór osobisty">
+										Odbiór osobisty
+									</label>
+								</div>
+
+							<div>
+								<span><strong>Suma:</strong></span>
+
+								<span>
+									39.00 zł
+								</span>
+							</div>
+
+							<div class="mt-3">
+								<!-- Button -->
+								<button>
+									Kupuję i płacę
+								</button>
+							</div>
+						</div>
+					</div>				
+				</div>
+
+                </div>
+                <!-- /.col-md-3 -->
+
+            </div>
+            <!-- /.container -->
+	</main> <!-- koniec głównej treści strony -->
+	
+	<!-- Stopka -->
+	<footer>
+		<div class="container">
+			<div class="row col-12 pb-3 pt-5 clearfix">
+				<div class="col-12 text-right">
+					<p>&copy; Halka 2018</p>
+				</div>	
+			</div>
+		</div>
+	</footer> <!-- koniec stopki -->
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>

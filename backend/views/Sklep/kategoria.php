@@ -6,7 +6,7 @@
 
 				<div class="col-lg-3">
           <div class="pt-5">
-						<? if ($_SESSION['category'] === "Pan"){?>
+						<?php if ($_SESSION['category'] === "Pan"){?>
           <img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object" width="267" height="368"/>
 				<?php }else{?>
 					<img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/>
