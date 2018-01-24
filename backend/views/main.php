@@ -33,7 +33,7 @@
 						<?php } ?>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 dropdown-basket">
-							<a class="basket float-right pr-xl-4"  data-toggle="dropdown" href="./koszyk.html" title="koszyk">
+							<a class="basket float-right pr-5"  data-toggle="dropdown" href="<?php echo ROOT_URL;?>sklep/koszyk" title="koszyk">
 								<span class="amount pr-4">0 zł</span>
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -58,7 +58,7 @@
 						<nav class="navbar navbar-expand-sm navbar-light">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span> MENU
-							</button>   
+							</button>
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="nav text-center flex-column flex-sm-row align-items-start">
 									<li class="nav-item dropdown" >
@@ -92,31 +92,9 @@
 									</li>
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/about" class="nav-link">O sklepie</a></li>
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
-
-							</ul>
+								</ul>
+							</div>
 						</nav>
-					</div>
-					<div class="col-md-4">
-						<a class="basket float-right pr-5"  data-toggle="dropdown" href="<?php echo ROOT_URL;?>sklep/koszyk" title="koszyk">
-							<span class="amount pr-4">0 zł</span>
-							<span class="count"></span>
-							<i class="fa fa-shopping-basket" aria-hidden="true"></i>
-						</a>
-						<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
-							<div class="dropdown-divider"></div>
-							<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
-							<div class="dropdown-divider"></div>
-							<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
-							<div class="dropdown-divider"></div>
-							<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
-							<div class="dropdown-divider"></div>
-							<li><p class="dropdown-item" href="#">Kwota:</p></li>
-							<div class="dropdown-divider"></div>
-							<li><a class="dropdown-item" href="#">Zobacz koszyk</a></li>
-							<li><a class="dropdown-item" href="#">Zamówienie</a></li>
-						</ul>
-
 					</div>
 				</div>
 			</div>
