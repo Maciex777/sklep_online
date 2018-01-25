@@ -189,14 +189,39 @@ nav ul li:first-child a::after, nav ul li:nth-child(2) a::after{
 	font-size:30px;	
 }
 
-/* przyciski w kontakcie */
+/* przyciski standardowe */
 .standard-buttons{
 	font-weight:600;
 	font-size:20px;	
 }
 
+/* Rozwijane listy w menu i koszyku */
+.dropdown>.my-dropdown-menu {
+	display:none;
+	background-color:#2E1F27;
+	list-style:none;
+}
+.dropdown-basket>.my-dropdown-menu {
+	display:none;
+	background-color:lightgrey;
+	list-style:none;
+}
 
-/* Responsywność pana i pani */
+/* Responsywność */
+@media only screen and (min-width: 576px) {
+.dropdown:hover>.my-dropdown-menu {
+  display: block;
+  z-index:100;
+  position:absolute;
+}
+.dropdown-basket:hover>.my-dropdown-menu{
+  display: block;
+  z-index:100;
+  position:absolute;
+  right:10%;
+  top:60px;
+}
+}
 @media only screen and (min-width: 1000px) {
 	.main-buttons{
 		width:320px;
@@ -262,6 +287,10 @@ nav ul li:first-child a::after, nav ul li:nth-child(2) a::after{
 		#pan > div > a > img, #pani > div > a > img{
 		width:100px;
 	}
+	
+	.dropdown-toggle::after {
+		display:none;
+	}
 }
 
 }
@@ -281,25 +310,6 @@ nav ul li:first-child a::after, nav ul li:nth-child(2) a::after{
 .about p{
 	font-size:1.4em;
 }
-
-/* Rozwijane listy w menu i koszyku 
------------------------------------------------------------
-*/
-
-.dropdown{
-		z-index:100;
-}
-
-.dropdown:hover>.dropdown-menu {
-  display: block;
-		z-index:100;
-}
-.dropdown-basket:hover>.dropdown-menu{
-  display: block;	
-  right:10%;
-  left:60%;
-}
-
 
 /*Animacje css dla pojawiania się elementów
 -----------------------------------------------------------
