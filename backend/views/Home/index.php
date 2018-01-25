@@ -5,14 +5,21 @@
 </div> -->
 <!-- Główna treść strony -->
 <main>
-	<div class="container">
-		<div id="pani" class="text-left">
-		<div><a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL; ?>assets/img/baba.png" alt="" width="355" height="440" /></a></div>
-		<div><a class="main-buttons" href="<?php echo ROOT_URL; ?>sklep/kategoria/9">Pani</a></div>
-		</div>
+	<div class="main_page">
+		<div class="container-fluid h-100">
+			<div class="row h-100 pb-5">
+				<div class="col-12">			
+					<div id="pani" class="text-md-center fade-in-left col-12 col-sm-6">
+					<div><a class="main-category" href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL; ?>assets/img/baba.png" alt="" /></a></div>
+					<div><a class="main-buttons" href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL; ?>assets/img/baba.png" alt="" />Pani</a></div>
+					</div>
 
-		<div id="pan" class="text-right"><div><a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL; ?>assets/img/dziad.png" alt="" width="357" height="458" /></a></div>
-		<div><a class="main-buttons" href="<?php echo ROOT_URL; ?>sklep/kategoria/1">Pan</a></div>
+					<div id="pan" class="text-md-center fade-in-right col-12 col-sm-6">
+					<div><a class="main-category" href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL; ?>assets/img/dziad.png" alt="" /></a></div>
+					<div><a class="main-buttons" href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL; ?>assets/img/dziad.png" alt="" />Pan</a></div>
+					</div>					
+				</div>
+			</div>
 		</div>
 	</div>
 </main> <!-- koniec głównej treści strony -->
