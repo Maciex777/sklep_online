@@ -7,7 +7,7 @@
       <div class="col-lg-3">
 
         <div class="pt-5">
-          <?php if ($_SESSION['category'] === "Pan"){?>
+          <? if ($_SESSION['category'] === "Pan"){?>
         <img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object" width="267" height="368"/>
       <?php }else{?>
         <img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/>
@@ -58,7 +58,7 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card h-100">
-                <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+                <img class="card-img-top" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="Zdjęcia dla <?php echo $product['product_name']; ?>">
                 <div class="card-body">
                   <h4 class="card-title"><?php echo $product['product_name']; ?></h4>
                   <!-- <p class="card-text"><?php //echo $product['product_description']; ?></p> -->
