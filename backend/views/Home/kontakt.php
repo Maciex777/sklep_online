@@ -52,11 +52,10 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-7 offset-md-5"><input type="submit" value="Wyślij wiadomość" class="btn btn-outline-info btn-block"></div>
+							<div class="col-md-7 offset-md-5"><input type="submit" name="submit" value="Wyślij wiadomość" class="btn btn-outline-info btn-block"></div>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</main> <!-- koniec głównej treści strony -->
-	
