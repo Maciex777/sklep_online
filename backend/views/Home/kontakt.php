@@ -1,7 +1,7 @@
 <!-- Główna treść strony -->
 	<main class="fade-in">
 		<div class="container">
-			<div class="row">
+			<div class="row main_page pt-5 mt-5">
 				<div class="col-md-4">
 					<div class="card">
 						<h3 class="card-header">Dane kontaktowe</h3>
@@ -52,10 +52,11 @@
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-md-7 offset-md-5"><input type="submit" name="submit" value="Wyślij wiadomość" class="btn btn-outline-info btn-block"></div>
+							<div class="col-md-7 offset-md-5"><input type="submit" value="Wyślij wiadomość" class="btn my-button standard-buttons btn-block"></div>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</main> <!-- koniec głównej treści strony -->
+	
