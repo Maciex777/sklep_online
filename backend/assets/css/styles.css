@@ -1,5 +1,4 @@
 body{
-		background-color:ghostwhite;
 	font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -9,8 +8,6 @@ a:hover{
 
 /* navbar */
 header{
-	border-bottom:1px solid #989898;
-	border-bottom:1px solid #000;
 	z-index:100;
 	position:relative;
 }
@@ -93,7 +90,7 @@ header .logo img:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	background-image:url(../img/bluza.jpg);
+	background-image:url(../img/bluza.png);
 }
 /*
 .main_slider_content{
@@ -138,40 +135,28 @@ nav ul li:first-child a::after, nav ul li:nth-child(2) a::after{
 	float:left;
 }
 #pan{
-	float:right;
+	float:left;
 }
-/*
-#pani > div > a >img:hover, #pan > div > a >img:hover {
-    -webkit-filter: contrast(120%);
-    filter: contrast(120%);
-	width:calc(100% + 5px);
-	height:calc(100% +5 px);
-}
-@media only screen and (max-width: 1400px) {
-	#pani > div > a >img{
-		width:310px;
-		margin-left:110px
-}
-	#pan > div > a >img{
-		width:310px;
-		padding-top:9px;
-		margin-right:110px;
-}
+#pan > div > .main-buttons > img, #pani > div > .main-buttons > img{
+	display:none;
 }
 
-@media only screen and (max-width: 1000px) {
-	#pani > div > a >img{
-		width:200px;
-	}
-	#pan > div > a >img{
-		width:200px;
-		padding-top:9px;
-	}
+
+#pani > div > .main-category >img:hover, #pan > div > .main-category >img:hover {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+    -webkit-transform: scale(1.05);
+  transform: scale(1.05);
 }
-*/
 
 /* przyciski pod panią i panem */
 .main-buttons{
+	position:relative;
+	margin:auto;
 	text-align:center;
 	display: block;
 	clear:both;
@@ -193,6 +178,76 @@ nav ul li:first-child a::after, nav ul li:nth-child(2) a::after{
 	background-color:#2E1F27;
 }
 
+
+/* Responsywność pana i pani */
+@media only screen and (min-width: 1000px) {
+	.main-buttons{
+		width:320px;
+	}
+	#pan > div > a > img, #pani > div > a > img{
+	width: 300px;
+	}
+}
+@media only screen and (max-width: 1400px) {
+	.main-buttons{
+		width:220px;
+	}
+		#pani > div > a > img{
+		width:210px;
+}
+	#pan > div > a > img{
+		width:210px;
+		padding-top:9px;
+}
+@media only screen and (max-width: 1000px) {
+	#pani > div > a > img{
+		width:150px;
+	}
+	#pan > div > a > img{
+		width:150px;
+		padding-top:9px;
+	}
+		.main-buttons{
+	width:150px;
+}
+}
+@media only screen and (max-width: 768px) {
+		#pan > div > .main-buttons, #pani > div > .main-buttons{
+			position:absolute;
+	}
+}
+@media only screen and (max-width: 576px) {
+
+		#pani > div > a > img, 	#pan > div > a > img{
+		display:none;
+		}
+		.main-buttons{
+			position:relative;
+			width:150px;
+			height:200px;
+		}
+		#pani, #pan{
+			clear:both;
+		}
+	#pan > div > .main-buttons, #pani > div > .main-buttons{
+		position:relative;
+		right:auto;
+		display:block;
+		margin:auto;
+		background-color:none;
+	}
+	#pan > div > .main-buttons > img, #pani > div > .main-buttons > img{
+		display:block;
+		padding:auto;
+		padding-top:10px;
+		margin:auto;
+	}
+		#pan > div > a > img, #pani > div > a > img{
+		width:100px;
+	}
+}
+
+}
 /* obrócenie pana w zakładce pan */
 .rotate-object {
     transform: scaleX(-1);
