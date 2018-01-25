@@ -7,5 +7,5 @@ define("DB_PASS", "");
 define("DB_NAME", "driada_halka");
 
 // Define URL
-define("ROOT_PATH", "/shareboard/");
-define("ROOT_URL", "http://localhost:8080/shareboard/");
+define("ROOT_PATH", "/sklep_onlinemoj/backend/");
+define("ROOT_URL", "http://localhost:8080/sklep_onlinemoj/backend/");
