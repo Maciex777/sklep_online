@@ -8,7 +8,7 @@ protected function kategoria(){
 }
 
 protected function produkt(){
-  $viewmodel = new SklepMoel();
+  $viewmodel = new SklepModel();
   $this->returnView($viewmodel->produkt(), true);
 }
 
@@ -17,6 +17,15 @@ protected function produkty(){
   $this->returnView($viewmodel->produkty(), true);
 }
 
+protected function koszyk(){
+  $viewmodel = new SklepModel();
+  $this->returnView($viewmodel->koszyk(), true);
+}
+
+protected function kasa(){
+  $viewmodel = new SklepModel();
+  $this->returnView($viewmodel->kasa(), true);
+}
 }
 
  ?>
