@@ -33,7 +33,7 @@
 						<?php } ?>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 dropdown-basket">
-							<a class="basket float-right pr-xl-4"  data-toggle="dropdown" href="./koszyk.html" title="koszyk">
+							<a class="basket float-right pr-xl-4" href="./koszyk.html" title="koszyk">
 								<span class="amount pr-4">0 zł</span>
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -62,7 +62,7 @@
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="nav text-center flex-column flex-sm-row align-items-start">
 									<li class="nav-item dropdown" >
-										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
+										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
 										<ul class="my-dropdown-menu">
 											<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
 												<ul>
@@ -76,7 +76,7 @@
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
-										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
+										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
 										<ul class="my-dropdown-menu">
 											<li>
 												<a class="dropdown-item" href="#">Pozycja 1</a></li>
