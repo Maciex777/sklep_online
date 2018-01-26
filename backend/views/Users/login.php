@@ -33,10 +33,10 @@
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" placeholder="Hasło">
                         </div>
-                        <button type="submit" name="submit" class="btn btn-main" value="login">Zaloguj się</button>
+                        <button type="submit" name="submit" class="btn my-button standard-buttons btn-main px-5 py-2 my-3" value="login">Zaloguj się</button>
 
                     </form>
-                    <p class="mt-4">Jesteś nowy na tej stronie?<a href="<?php echo ROOT_URL; ?>signin"> Utwórz konto</a></p>
+                    <p class="mt-4">Jesteś nowy na tej stronie?<a href="<?php echo ROOT_URL; ?>register"> Utwórz konto</a></p>
                     <p><a href="<?php echo ROOT_URL; ?>forget-password"> Zapomniałeś hasła?</a></p>
                 </div>
             </div>

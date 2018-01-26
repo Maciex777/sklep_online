@@ -23,7 +23,7 @@
 					<div class="row log-nav col-md-12 text-center text-md-right pt-3">
 						<div class="col-12 col-sm-6 col-md-8 col-lg-9 float-left text-md-right">
 						<?php if (isset($_SESSION['is_logged_in'])) { ?>
-							<a href="<?php echo ROOT_URL; ?>" class="pr-2"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
+							<a href="<?php echo ROOT_URL; ?>" class="pr-md-5 mr-md-5 pr-4 mr-4"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
 
 							<a href="<?php echo ROOT_URL; ?>users/logout" class="pr-2"><i class="fa fa-user"></i> Wyloguj się</a>
 
@@ -34,12 +34,12 @@
 						<?php } ?>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 dropdown-basket">
-							<a class="basket float-right pr-5"  data-toggle="dropdown" href="<?php echo ROOT_URL;?>sklep/koszyk" title="koszyk">
+							<a class="basket float-right pr-xl-4" href="./koszyk.html" title="koszyk">
 								<span class="amount pr-4">0 zł</span>
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 							</a>
-							<ul class="dropdown-menu">
+							<ul class="my-dropdown-menu">
 								<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
 								<div class="dropdown-divider"></div>
 								<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
@@ -59,12 +59,12 @@
 						<nav class="navbar navbar-expand-sm navbar-light">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span> MENU
-							</button>
+							</button>   
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="nav text-center flex-column flex-sm-row align-items-start">
 									<li class="nav-item dropdown" >
-										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle" data-toggle="dropdown">Pani</a>
-										<ul class="dropdown-menu">
+										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
+										<ul class="my-dropdown-menu">
 											<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
 												<ul>
 													<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
@@ -77,8 +77,8 @@
 										</ul>
 									</li>
 									<li class="nav-item dropdown">
-										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle"  data-toggle="dropdown">Pan</a>
-										<ul class="dropdown-menu">
+										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
+										<ul class="my-dropdown-menu">
 											<li>
 												<a class="dropdown-item" href="#">Pozycja 1</a></li>
 												<ul>
@@ -95,7 +95,7 @@
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
 								</ul>
 							</div>
-						</nav>
+						</nav>				
 					</div>
 				</div>
 			</div>
