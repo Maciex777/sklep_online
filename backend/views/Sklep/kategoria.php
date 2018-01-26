@@ -5,14 +5,17 @@
 			  <div class="row">
 
 				<div class="col-lg-3">
+			<a class="btn my-button standard-buttons btn-lg px-5 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
           <div class="pt-5">
 						<?php if ($_SESSION['category'] === "Pan"){?>
-          <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object" width="267" height="368"/></a>
+          <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object img-fluid" width="267"/></a>
 				<?php }else{?>
-					<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/></a>
+					<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object img-fluid" width="267"/></a>
 				<?php }?>
           </div>
-				  <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
+		  <div class="text-center" style="border:1px solid #000">
+				<h1 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h1>
+		  </div>
 
 
 
@@ -20,7 +23,7 @@
 				<!-- /.col-lg-3 -->
 
 				<div class="col-lg-9">
-
+						
 				  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
 					<ol class="carousel-indicators">
 					  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -29,13 +32,17 @@
 					</ol>
 					<div class="carousel-inner" role="listbox">
 					  <div class="carousel-item active">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide">
+						<?php if ($_SESSION['category'] === "Pan"){?>
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes1.jpg" alt="First slide">
+						<?php }else{?>
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="Third slide">										
+						<?php }?>	
 					  </div>
 					  <div class="carousel-item">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide">
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes2.jpg" alt="Second slide">
 					  </div>
 					  <div class="carousel-item">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide">
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="Third slide">
 					  </div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
