@@ -5,7 +5,7 @@
 </div> -->
 <!-- Główna treść strony -->
 <main>
-	<div class="main_page">
+	<div class="main_page h-100">
 		<div class="container-fluid h-100">
 			<div class="row h-100 pb-5">
 				<div class="col-12">			
@@ -23,3 +23,20 @@
 		</div>
 	</div>
 </main> <!-- koniec głównej treści strony -->
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $("#pani > div > .main-category > img").hover(function () {
+    $("#pani .main-buttons").toggleClass("img_hover");
+ });
+  $("#pan > div > .main-category > img").hover(function () {
+    $("#pan .main-buttons").toggleClass("img_hover");
+ });
+  $("#pani .main-buttons").hover(function () {
+    $("#pani > div > .main-category > img").toggleClass("button_hover");
+ });
+   $("#pan .main-buttons").hover(function () {
+    $("#pan > div > .main-category > img").toggleClass("button_hover");
+ });
+});
+</script>

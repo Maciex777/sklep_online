@@ -4,13 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
-
+  <!-- STYLESHEET META -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
-	<script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- JS META -->
+  <script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
+  <script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -30,7 +37,7 @@
 
 						<?php }else { ?>
 
-							<a href="<?php echo ROOT_URL; ?>users/login" class="pr-2"><i class="fa fa-user"></i> Zaloguj się</a>
+							<a href="<?php echo ROOT_URL; ?>users/login" class="pr-2"><i class="fa fa-user gold-color"></i> Zaloguj się</a>
 
 						<?php } ?>
 						</div>
@@ -57,7 +64,7 @@
 						</div>
 					</div>
 					<div class="row col-md-12">
-						<nav class="navbar navbar-expand-sm navbar-light">
+						<nav class="navbar navbar-expand-sm navbar-light mx-auto mx-sm-0">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span> MENU
 							</button>
@@ -116,6 +123,7 @@
 				</div>
 			</div>
 		</footer> <!-- koniec stopki -->
+
 
 
 		<script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
