@@ -26,7 +26,7 @@ class UserModel extends Model{
 	public function login(){
 		// Sanitize POST
 		$post = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
-
+$error_login = "";
 		//$password = password_hash($post['password'], PASSWORD_DEFAULT);
 
 		if(isset($post['submit']) && $post['submit'] === "login"){
@@ -52,9 +52,9 @@ class UserModel extends Model{
 
 			header('Location: '.ROOT_URL);
 		} else {
-			echo 'Podano złe dane logowania';
+			$error_login = "Podano nie prawidłowe dane logowania!";
 		}
 	}
-		return;
+		return $error_login;
 	}
 }

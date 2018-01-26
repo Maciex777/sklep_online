@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
+
 </head>
 <body>
 

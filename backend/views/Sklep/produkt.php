@@ -38,10 +38,11 @@
 			<div class="card-body">
 			  <p><?php echo $viewmodel['product_description']; ?></p>
 			  <hr>
-				<form action="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $viewmodel['product_id'];?>" method="post">
+				<button type="button" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
+				<!-- <form action="<?php //echo ROOT_URL;?>sklep/produkt/<?php// echo $viewmodel['product_id'];?>" method="post">
 
 				<input type="submit" name="cart_action" value="Dodaj do koszyka">
-				</form>
+				</form> -->
 				<?php //if (isset($_SESSION['cart'])){
 				//echo "<pre>";
 				//print_r($_SESSION['cart']);
@@ -58,3 +59,21 @@
 
 	</div>
 	</main> <!-- koniec głównej treści strony -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$("#add_to_cart").click(function(){
+
+		$.ajax({
+        url: '<?php echo ROOT_URL;?>expansion/Addtocart.php',
+        type: 'POST',
+
+        success:function(response){
+           alert("Dodano do koszyka");
+        }
+   });
+	});
+});
+
+
+</script>
