@@ -23,6 +23,9 @@
             <div class="col-md-6 mx-auto">
                 <div class="block">
                     <h2 class="text-center pt-4 pb-4">Zaloguj się do sklepu</h2>
+                    <?php if ($viewmodel != ""){?>
+                    <h6 class="text-center pt-4 pb-4"><?php echo $viewmodel ?></h6>
+                  <?php } ?>
                     <form class="text-left clearfix mt-50" action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                         <div class="form-group">
                             <input type="email" name="email" class="form-control"  placeholder="E-mail">
