@@ -21,7 +21,7 @@
 		<div class="col-lg-9">
 
 		  <div class="card mt-4">
-			<img class="card-img-top img-fluid" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="">
+			<img class="card-img-top img-fluid" src="<?php echo ROOT_URL; //echo $viewmodel['category_photo']; ?>" alt="">
 			<div class="card-body">
 			  <h3 class="card-title"><?php echo $viewmodel['product_name']; ?></h3>
 			  <h4>Cena : <?php echo $viewmodel['product_cost']; ?> zł</h4>
@@ -38,7 +38,7 @@
 			<div class="card-body">
 			  <p><?php echo $viewmodel['product_description']; ?></p>
 			  <hr>
-				<button type="button" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
+				<button type="button" name="dodaj" id = "add_to_cart" onclick="">Dodaj do koszyka</button>
 				<!-- <form action="<?php //echo ROOT_URL;?>sklep/produkt/<?php// echo $viewmodel['product_id'];?>" method="post">
 
 				<input type="submit" name="cart_action" value="Dodaj do koszyka">
@@ -52,20 +52,26 @@
 		  <!-- /.card -->
 
 		</div>
-  <?php  //} ?>
 		<!-- /.col-lg-9 -->
 
 	  </div>
 
 	</div>
 	</main> <!-- koniec głównej treści strony -->
-<script type="text/javascript">
+	<?php //require('./skrypt.js');
+	?>
+<script>
+// function time(){
+// 	$("#add_to_cart").fadeOut();
+// }
+// setTimeout("time()",1000);
+
 
 $(document).ready(function(){
 	$("#add_to_cart").click(function(){
 
 		$.ajax({
-        url: '<?php echo ROOT_URL;?>expansion/Addtocart.php',
+        url: '<?php echo ROOT_URL; ?>views/Sklep/Addtocart.php',
         type: 'POST',
 
         success:function(response){
@@ -74,6 +80,7 @@ $(document).ready(function(){
    });
 	});
 });
+
 
 
 </script>

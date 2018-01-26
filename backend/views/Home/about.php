@@ -21,7 +21,7 @@
 					<p>Kładziemy nacisk na jakość naszych produktów, stawiając na naturalne, przyjazne dla skóry materiały i tkaniny. Zwracamy szczególną uwagę na wygodę, komfort noszenia i wykończenie naszych produktów.<br/>
 							Współpracujemy tylko z zaufanymi, głównie polskimi, producentami.
 							</p>
-					<a href="./kontakt.html" class="btn my-button standard-buttons btn-lg px-5 py-2">Skontaktuj się</a>
+					<a href="<?php echo ROOT_URL; ?>/Home/kontakt" class="btn my-button standard-buttons btn-lg px-5 py-2">Skontaktuj się</a>
 				</div>
 			</div>
 		</div>

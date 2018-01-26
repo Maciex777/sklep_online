@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
-
+	<script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -59,7 +60,7 @@
 						<nav class="navbar navbar-expand-sm navbar-light">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span> MENU
-							</button>   
+							</button>
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="nav text-center flex-column flex-sm-row align-items-start">
 									<li class="nav-item dropdown" >
@@ -95,7 +96,7 @@
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
 								</ul>
 							</div>
-						</nav>				
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -116,8 +117,9 @@
 			</div>
 		</footer> <!-- koniec stopki -->
 
-		<script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
+
 		<script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
 		<script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
+
 	</body>
 	</html>
