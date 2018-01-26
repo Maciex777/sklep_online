@@ -4,14 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
-
+  <!-- STYLESHEET META -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
-		<script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
-		<script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
-		<script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
+  <!-- JS META -->
+  <script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
+  <script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
 </head>
 <body>
 

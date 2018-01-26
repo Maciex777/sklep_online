@@ -42,6 +42,7 @@
 			  <p><?php echo $viewmodel['product_description']; ?></p>
 			  <hr>
 				<button type="button" class="btn my-button standard-buttons btn-lg px-5 py-2" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
+
 				<!-- <form action="<?php //echo ROOT_URL;?>sklep/produkt/<?php// echo $viewmodel['product_id'];?>" method="post">
 
 				<input type="submit" name="cart_action" value="Dodaj do koszyka">

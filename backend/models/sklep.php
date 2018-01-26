@@ -30,6 +30,7 @@ class SklepModel extends Model {
   public function produkt(){
 
     $this->product_id = $_GET['id'];
+    $_SESSION['now_id'] = $_GET['id'];
 
     if (isset($_POST['cart_action']) && $_POST['cart_action'] === "Dodaj do koszyka"){
 
