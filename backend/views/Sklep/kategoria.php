@@ -5,7 +5,7 @@
 			  <div class="row">
 
 				<div class="col-lg-3">
-			<a class="btn my-button standard-buttons btn-lg px-5 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
+			<a href="<?php echo ROOT_URL; ?>" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
           <div class="pt-5">
 						<?php if ($_SESSION['category'] === "Pan"){?>
           <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object img-fluid" width="267"/></a>
@@ -23,7 +23,7 @@
 				<!-- /.col-lg-3 -->
 
 				<div class="col-lg-9">
-						
+
 				  <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
 					<ol class="carousel-indicators">
 					  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -35,8 +35,8 @@
 						<?php if ($_SESSION['category'] === "Pan"){?>
 						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes1.jpg" alt="First slide">
 						<?php }else{?>
-						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="Third slide">										
-						<?php }?>	
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="Third slide">
+						<?php }?>
 					  </div>
 					  <div class="carousel-item">
 						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes2.jpg" alt="Second slide">
