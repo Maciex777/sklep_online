@@ -5,16 +5,17 @@
     <div class="row">
 
       <div class="col-lg-3">
-
+			<a href="<?php echo ROOT_URL; ?>sklep/kategoria/<?php echo $viewmodel['parent_category_id'][1]; ?>" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
         <div class="pt-5">
           <?php if ($_SESSION['category'] === "Pan"){?>
-        <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object" width="267" height="368"/></a>
+        <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object img-fluid" width="267"/></a>
       <?php }else{?>
-        <a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/></a>
+        <a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object img-fluid" width="267"/></a>
       <?php }?>
         </div>
-        <h1 class="my-4"><?php echo $_SESSION['category'];?> / <?php echo $_SESSION['current_category']; ?></h1>
-
+		  <div class="text-center" style="border:1px solid #000">
+				<h1 class="my-4"><strong><?php echo $_SESSION['category'];?> / <?php echo $_SESSION['current_category']; ?></strong></h1>
+		  </div>
 
 
       </div>
