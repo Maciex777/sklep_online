@@ -14,7 +14,7 @@
       <?php }?>
         </div>
 		  <div class="text-center" style="border:1px solid #000">
-				<h1 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h1>
+				<h1 class="my-4"><strong><?php echo $_SESSION['category'];?> / <?php echo $_SESSION['current_category']; ?></strong></h1>
 		  </div>
 
 

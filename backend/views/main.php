@@ -9,10 +9,15 @@
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <!-- JS META -->
   <script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
   <script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
   <script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -37,7 +42,7 @@
 						<?php } ?>
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 dropdown-basket">
-							<a class="basket float-right pr-xl-4" href="./koszyk.html" title="koszyk">
+							<a class="basket float-right pr-xl-4" href="<?php echo ROOT_URL; ?>sklep/koszyk" title="koszyk">
 								<span class="amount pr-4">0 zł</span>
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
@@ -62,7 +67,7 @@
 						<nav class="navbar navbar-expand-sm navbar-light mx-auto mx-sm-0">
 							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span> MENU
-							</button>   
+							</button>
 							<div class="collapse navbar-collapse" id="collapsibleNavbar">
 								<ul class="nav text-center flex-column flex-sm-row align-items-start">
 									<li class="nav-item dropdown" >
@@ -98,7 +103,7 @@
 								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
 								</ul>
 							</div>
-						</nav>				
+						</nav>
 					</div>
 				</div>
 			</div>
@@ -119,6 +124,10 @@
 			</div>
 		</footer> <!-- koniec stopki -->
 
+
+
+		<script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
+		<script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
 
 	</body>
 	</html>
