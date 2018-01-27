@@ -15,8 +15,6 @@
 
   <!-- JS META -->
   <script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
-  <script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
-  <script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
 
 </head>
 <body>
