@@ -13,9 +13,9 @@
 					<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object img-fluid" width="267"/></a>
 				<?php }?>
           </div>
-		  <div class="text-center" style="border:1px solid #000">
-				<h1 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h1>
-		  </div>
+		<div class="text-center" style="border-top:1px solid silver">
+			<h2 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h2>
+		</div>
 
 
 
@@ -35,11 +35,15 @@
 						<?php if ($_SESSION['category'] === "Pan"){?>
 						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes1.jpg" alt="First slide">
 						<?php }else{?>
-						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="Third slide">
-						<?php }?>
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="First slide">										
+						<?php }?>	
 					  </div>
 					  <div class="carousel-item">
+					  	<?php if ($_SESSION['category'] === "Pan"){?>
 						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes2.jpg" alt="Second slide">
+						<?php }else{?>
+						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes2.jpg" alt="Second slide">													
+						<?php }?>												
 					  </div>
 					  <div class="carousel-item">
 						<img class="d-block img-fluid" src="<?php echo ROOT_URL;?>assets/img/clothes4.jpg" alt="Third slide">
