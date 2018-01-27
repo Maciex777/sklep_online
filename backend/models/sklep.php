@@ -17,6 +17,7 @@ class SklepModel extends Model {
 
     if($category){
       $_SESSION['category'] = ucwords(str_replace('_',' ',$category['category']));
+
     }
 
     $this->query('SELECT * FROM categories WHERE parent_category_id = :id_category');
@@ -67,6 +68,7 @@ class SklepModel extends Model {
     $this->query('SELECT * FROM categories WHERE id = :category_id');
     $this->bind(':category_id' , $this->id_category);
     $category = $this->single();
+      $_SESSION['category_id'] = $category['parent_category_id'];
 
     $_SESSION['current_category'] = ucfirst(str_replace('_',' ',$category['category']));
     $this->query('SELECT * FROM products WHERE product_category = :id_category');

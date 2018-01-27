@@ -5,7 +5,7 @@
     <div class="row">
 
       <div class="col-lg-3">
-			<a href="<?php echo ROOT_URL; ?>sklep/kategoria/<?php echo $viewmodel['parent_category_id'][1]; ?>" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
+			<a href="<?php echo ROOT_URL; ?>sklep/kategoria/<?php echo $_SESSION['category_id']; ?>" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
         <div class="pt-5">
           <?php if ($_SESSION['category'] === "Pan"){?>
         <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object img-fluid" width="267"/></a>
@@ -59,7 +59,7 @@
 
             <div class="col-lg-3 col-md-6 mb-4">
               <div class="card h-100">
-                <img class="card-img-top" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="Zdjęcia dla <?php echo $product['product_name']; ?>">
+                <img class="card-img-top" src="<?php echo ROOT_URL; echo $product['product_image']; ?>" alt="Zdjęcia dla <?php echo $product['product_name']; ?>">
                 <div class="card-body">
                   <h4 class="card-title"><?php echo $product['product_name']; ?></h4>
                   <!-- <p class="card-text"><?php //echo $product['product_description']; ?></p> -->
