@@ -13,7 +13,7 @@
         <a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object" width="267" height="368"/></a>
       <?php }?>
         </div>
-        <h1 class="my-4"><?php echo $_SESSION['category'];?></h1>
+        <h1 class="my-4"><?php echo $_SESSION['category'];?> / <?php echo $_SESSION['current_category']; ?></h1>
 
 
 
