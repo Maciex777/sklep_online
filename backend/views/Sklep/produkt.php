@@ -38,10 +38,10 @@
 						<span> darmowa dostawa</span>
 					</div>
 					<span>Cena:</span>
-					<div class="product_price mt-4 mx-2"><?php echo $viewmodel['product_cost']; ?> zł</div>
+					<div class="product_price mt-4 mx-2"><strong><?php echo $viewmodel['product_cost']; ?> zł</strong></div>
 					<div class="mt-4">
 						<span>Stan magazynowy:</span>
-						<span><?php echo $viewmodel['product_stock']; ?></span><span> sztuk</span>
+						<span><strong><?php echo $viewmodel['product_stock']; ?></span><span> sztuk</strong></span>
 					</div>
 					<div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
 						<span>Ilość:</span>

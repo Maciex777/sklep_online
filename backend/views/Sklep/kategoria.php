@@ -66,16 +66,17 @@
               $category = ucfirst(str_replace('_',' ',$cat['category']));
               ?>
 					<div class="col-lg-4 col-md-6 mb-4">
+					  <a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>">
 					  <div class="card h-100">
-						<a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>"><img class="card-img-top" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="Zdjęcia dla <?php echo $category; ?>"></a>
+						<img class="card-img-top" src="<?php echo ROOT_URL; echo $cat['category_photo']; ?>" alt="Zdjęcia dla <?php echo $category; ?>">
 						<div class="card-body">
 						  <h4 class="card-title">
-							<a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $cat['id'];?>"> <?php echo $category; ?></a>
+							<h3"> <?php echo $category; ?></h3>
 						  </h4>
-
 						  <p class="card-text"> <?php echo $cat['category_description']; ?></p>
 						</div>
-          </div>
-        </div>
+				    </div>
+				    </a>
+				  </div>
             <?php } ?>
           </main> <!-- koniec głównej treści strony -->
