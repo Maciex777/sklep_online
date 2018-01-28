@@ -13,9 +13,11 @@
         <a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object img-fluid" width="267"/></a>
       <?php }?>
         </div>
-		  <div class="text-center" style="border:1px solid #000">
-				<h1 class="my-4"><strong><?php echo $_SESSION['category'];?> / <?php echo $_SESSION['current_category']; ?></strong></h1>
-		  </div>
+		<div class="text-center" style="border-top:1px solid silver">
+			<h2 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h2>
+			<hr>
+			<h3><?php echo $_SESSION['current_category']; ?></h3>
+		</div>
 
 
       </div>
@@ -58,12 +60,14 @@
             ?>
 
             <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card h-100">
+			<div class="card h-100">
+			  <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="h-100">
                 <img class="card-img-top" src="<?php echo ROOT_URL; echo $product['product_image']; ?>" alt="Zdjęcia dla <?php echo $product['product_name']; ?>">
                 <div class="card-body">
                   <h4 class="card-title"><?php echo $product['product_name']; ?></h4>
                   <!-- <p class="card-text"><?php //echo $product['product_description']; ?></p> -->
                 </div>
+			  </a>
                 <div class="card-footer">
                   <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="btn btn-primary">Zobacz</a>
                 </div>

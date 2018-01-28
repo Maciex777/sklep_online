@@ -15,8 +15,6 @@
 
   <!-- JS META -->
   <script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
-  <script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
-  <script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -37,7 +35,7 @@
 
 						<?php }else { ?>
 
-							<a href="<?php echo ROOT_URL; ?>users/login" class="pr-2"><i class="fa fa-user gold-color"></i> Zaloguj się</a>
+							<a href="<?php echo ROOT_URL; ?>users/login" class="pr-2"><i class="fa fa-user"></i> Zaloguj się</a>
 
 						<?php } ?>
 						</div>
@@ -64,46 +62,157 @@
 						</div>
 					</div>
 					<div class="row col-md-12">
-						<nav class="navbar navbar-expand-sm navbar-light mx-auto mx-sm-0">
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<nav class="fixtop navbar navbar-expand-md navbar-light mx-auto mx-sm-0">
+    <div class="container">
+        							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 								<span class="navbar-toggler-icon"></span> MENU
 							</button>
-							<div class="collapse navbar-collapse" id="collapsibleNavbar">
-								<ul class="nav text-center flex-column flex-sm-row align-items-start">
-									<li class="nav-item dropdown" >
-										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
-										<ul class="my-dropdown-menu">
-											<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
-												<ul>
-													<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
-													<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
-													<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
-												</ul>
-											<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
-											<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
-											<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
-										</ul>
-									</li>
-									<li class="nav-item dropdown">
-										<a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
-										<ul class="my-dropdown-menu">
-											<li>
-												<a class="dropdown-item" href="#">Pozycja 1</a></li>
-												<ul>
-													<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
-													<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
-													<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
-												</ul>
-											<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
-											<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
-											<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
-										</ul>
-									</li>
-								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/about" class="nav-link">O sklepie</a></li>
-								<li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
-								</ul>
-							</div>
-						</nav>
+        <div class="navbar-collapse collapse" id="collapsibleNavbar">
+            <ul class="nav navbar-nav">
+            <li class="dropdown menu-large nav-item"><a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
+                <ul class="dropdown-menu megamenu my-dropdown-menu">
+                    <div class="row">
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Piżamy i rajstopy</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li class="disabled"><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Bielizna i getry</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li><a href="#">Pozycja 4</a>
+                            </li>
+                            <li><a href="#">Pozycja 5</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Bielizna</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Spodnie</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li><a href="#">Pozycja 4</a>
+                            </li>
+                            <li><a href="#">Pozycja 5</a>
+                            </li>
+                            <li><a href="#">Pozycja 6</a>
+                            </li>
+                            <li><a href="#">Pozycja 7</a>
+                            </li>
+                            <li><a href="#">Pozycja 8</a>
+                            </li>
+                            <li><a href="#">Pozycja 9</a>
+                            </li>
+                        </ul>
+                    </li>
+                    </div>
+                    </ul>
+            </li>
+            <li class="dropdown menu-large nav-item"><a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
+                <ul class="dropdown-menu megamenu my-dropdown-menu">
+                    <div class="row">
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Bielizna</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li class="disabled"><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Piżamy i szlafroki</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li><a href="#">Pozycja 4</a>
+                            </li>
+                            <li><a href="#">Pozycja 5</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Podkoszulki</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="col-md-3">
+                        <ul>
+                            <li class="dropdown-header">Spodnie</li>
+                            <li><a href="#">Pozycja 1</a>
+                            </li>
+                            <li><a href="#">Pozycja 2</a>
+                            </li>
+                            <li><a href="#">Pozycja 3</a>
+                            </li>
+                            <li><a href="#">Pozycja 4</a>
+                            </li>
+                            <li><a href="#">Pozycja 5</a>
+                            </li>
+                            <li><a href="#">Pozycja 6</a>
+                            </li>
+                            <li><a href="#">Pozycja 7</a>
+                            </li>
+                            <li><a href="#">Pozycja 8</a>
+                            </li>
+                            <li><a href="#">Pozycja 9</a>
+                            </li>
+                        </ul>
+                    </li>
+                    </div>
+                    </ul>
+            </li>
+			 <li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/about" class="nav-link">O sklepie</a></li>
+			 <li class="nav-item"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 					</div>
 				</div>
 			</div>
@@ -113,21 +222,42 @@
 		<?php require($view); ?>
 
 
-		<!-- Stopka -->
-		<footer>
-			<div class="container">
-				<div class="row col-12 pb-3 pt-5 clearfix">
-					<div class="col-12 text-right">
-						<p>&copy; Halka 2018</p>
-					</div>
+	<!-- Stopka -->
+	<footer>
+		<div class="container">
+			<div class="row col-12 pb-3 pt-5 clearfix">
+				<div class="col-12 text-right">
+					<p>&copy; Halka 2018</p>
 				</div>
 			</div>
-		</footer> <!-- koniec stopki -->
+		</div>
+	</footer> <!-- koniec stopki -->
 
+<!-- Strzałka przekierowująca do góry -->	
+<button id="myBtn" title="Go to top"></button>
+<script>
+//strzałka przekierowywująca na samą górę
+var amountScrolled = 300;
 
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('#myBtn').fadeIn('slow');
+	} else {
+		$('#myBtn').fadeOut('slow');
+	}
+});
 
-		<script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
-		<script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
+//przekierowanie na górę po kliknięciu na strzałkę
+$(document).on('click','#myBtn', function(){
+	$('html, body').animate({
+		scrollTop: 0
+	}, 700);
+	return false;
+});
+</script>
 
-	</body>
-	</html>
+<script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
+<script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
