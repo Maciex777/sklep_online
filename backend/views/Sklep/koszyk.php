@@ -16,9 +16,14 @@
 <?php foreach($viewmodel as $item){?>
 						<tr class="table-row">
 							<td class="column-1 col-6 col-md-3">
-								<div class="cart-img-product">
-									<img src="images/item-10.jpg" alt="Zdjecie produktu">
+							<div class="row">
+								<div class="col-4 m-auto" id="delete-icon">
+									<i class="fa fa-times float-left" aria-hidden="true"></i>
 								</div>
+									<div class="col-8 cart-img-product">
+										<img src="images/item-10.jpg" alt="Zdjecie produktu">
+									</div>						
+							</div>
 							</td>
 							<td class="column-2 col-6 col-md-3"><?php echo $item['product_name']; ?></td>
 							<td class="column-3 col-4 col-md-2"><?php echo $item['product_cost']; ?> zł</td>
