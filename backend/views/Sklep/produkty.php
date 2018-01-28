@@ -60,12 +60,14 @@
             ?>
 
             <div class="col-lg-3 col-md-6 mb-4">
-              <div class="card h-100">
+			<div class="card h-100">
+			  <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="h-100">
                 <img class="card-img-top" src="<?php echo ROOT_URL; echo $product['product_image']; ?>" alt="Zdjęcia dla <?php echo $product['product_name']; ?>">
                 <div class="card-body">
                   <h4 class="card-title"><?php echo $product['product_name']; ?></h4>
                   <!-- <p class="card-text"><?php //echo $product['product_description']; ?></p> -->
                 </div>
+			  </a>
                 <div class="card-footer">
                   <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="btn btn-primary">Zobacz</a>
                 </div>
