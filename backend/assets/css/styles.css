@@ -148,6 +148,7 @@ header .logo img:hover {
 	right:128px;
 	color:#9e6600;
 	opacity:.9;
+	z-index:99999999999;
 }
 .log-nav .fa-user:hover{
 	opacity:1;
@@ -528,7 +529,12 @@ header .logo img:hover {
   font-size: 15px;
 }
 
-
+#delete-icon{
+	font-size:25px;
+}
+#delete-icon:hover{
+	color:#b30000;
+}
 /* ------------------------------------ */
 .cart-img-product {
   width: 90px;
