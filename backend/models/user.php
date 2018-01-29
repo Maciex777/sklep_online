@@ -52,7 +52,7 @@ class UserModel extends Model{
 
 				header('Location: '.ROOT_URL);
 			} else {
-				$error_login = "Podano nie prawidłowe dane logowania!";
+				$error_login = "Podano nieprawidłowe dane logowania!";
 				return $error_login;
 			}
 		}
