@@ -28,7 +28,7 @@
 				<div class="col-md-10 col-lg-9">
 					<div class="row log-nav col-md-12 text-center text-md-right pt-3">
 						<div class="col-12 col-sm-6 col-md-8 col-lg-9 float-left text-md-right">
-						<h2 id="main-title">Odzież dla seniorów</h2>
+						<img class="img-fluid" id="main-title" src="<?php echo ROOT_URL; ?>assets/img/title.png" alt="tytuł strony">
 						<?php if (isset($_SESSION['is_logged_in'])) { ?>
 							<a href="<?php echo ROOT_URL; ?>/users/account" class="pr-md-5 mr-md-5 pr-4 mr-4" id="welcome"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
 
