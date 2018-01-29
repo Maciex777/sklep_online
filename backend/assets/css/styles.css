@@ -187,7 +187,7 @@ header .logo img:hover {
 }
 @media only screen and (max-width: 1000px) {
 	#main-title{
-		top:30px;
+		top:42px;
 		right:20%;
 		width:250px;
 	}
