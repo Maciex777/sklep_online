@@ -178,11 +178,18 @@ header .logo img:hover {
 .log-nav .fa-user:hover{
 	opacity:1;
 }
-#login, #logout{
-		z-index:99999999999;
-		position:absolute;
-		right:0;
+#login, #logout, #welcome{
+	z-index:99999999999;
+	position:absolute;	
 }
+
+#login, #welcome{
+	right:0;
+}
+#logout{
+	right:-80px;
+}
+
 @media only screen and (max-width: 768px) {
 .log-nav .fa-user{
 	font-size:2em;
@@ -191,7 +198,6 @@ header .logo img:hover {
 }	
 }
 #login{
-		z-index:99999999999;
 		position:relative;
 		right:auto;
 }
