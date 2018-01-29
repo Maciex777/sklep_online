@@ -31,11 +31,11 @@
 						<?php if (isset($_SESSION['is_logged_in'])) { ?>
 							<a href="<?php echo ROOT_URL; ?>/users/account" class="pr-md-5 mr-md-5 pr-4 mr-4"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
 
-							<a href="<?php echo ROOT_URL; ?>users/logout" class="pr-2 login"><i class="fa fa-user"></i> Wyloguj się</a>
+							<a href="<?php echo ROOT_URL; ?>users/logout" class="pr-2" id="logout"><i class="fa fa-user"></i> Wyloguj się</a>
 
 						<?php }else { ?>
 
-							<a href="<?php echo ROOT_URL; ?>users/login" class="pr-2 login"><i class="fa fa-user"></i> Zaloguj się</a>
+							<a href="<?php echo ROOT_URL; ?>users/login" class="pr-2" id="login"><i class="fa fa-user"></i> Zaloguj się</a>
 
 						<?php } ?>
 						</div>
