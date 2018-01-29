@@ -61,13 +61,13 @@ class UserModel extends Model{
 
 	public function account(){
 		unset($_SESSION['response']);
-		if (!isset($_SESSION['is_logged_in']) || $_SESSION['is_logged_in'] === false){
+		if (!isset($_SESSION['is_logged_in'])) {
 
-			header('Location: '.ROOT_URL.'users/login');
+			//header('Location: '.ROOT_URL.'users/login');
 
 		} else {
 
-			if (isset($_POST['submit']) && $_POST['submit'] == "password_change"){
+			if (isset($_POST['submit']) && $_POST['submit'] === "password_change"){
 
 				$this->query('SELECT * FROM users WHERE email = :email');
 				$this->bind(':email' , $_SESSION['user_data']['email']);
@@ -108,3 +108,4 @@ class UserModel extends Model{
 	}
 
 }
+?>
