@@ -166,31 +166,30 @@ header .logo img:hover {
 }
 
 #main-title{
-	font-size:2.2em;
 	position:absolute;
-	font-family: 'Cinzel', serif;
-	color:#9e6600;
-	letter-spacing:4px;
+	right:40%;
 }
 @media only screen and (max-width: 1440px) {
 	#main-title{
-	font-size:1.6em;
+		width:370px;
+		right:35%;
 	}
 }
 @media only screen and (max-width: 1305px) {
 	#main-title{
-	font-size:1.4em;
+		width:320px;
 	}
 }
 @media only screen and (max-width: 1115px) {
 	#main-title{
-	font-size:1.2em;
+		width:295px;
 	}
 }
 @media only screen and (max-width: 1000px) {
 	#main-title{
-	width:300px;
-	text-align:center;
+		top:30px;
+		right:20%;
+		width:250px;
 	}
 }
 @media only screen and (max-width: 795px) {
