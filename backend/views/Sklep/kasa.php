@@ -32,23 +32,49 @@
 							  <div class="col-sm-6">
 								  <div class="form-group">
 									  <label for="city">Miasto</label>
-									  <input type="text" class="form-control" id="city" placeholder="Miasto">
+									  <input type="text" class="form-control" id="city" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+										echo $viewmodel['city'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+										echo $viewmodel['city'];} else {echo "Miasto";}?>">
 								  </div>
 							  </div>
 							  <div class="col-sm-6">
 								  <div class="form-group">
 									  <label for="street">Ulica</label>
-									  <input type="text" class="form-control" id="street" placeholder="Ulica">
+									  <input type="text" class="form-control" id="street" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+										echo $viewmodel['street'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+										echo $viewmodel['street'];} else {echo "Ulica";}?>">
 								  </div>
 							  </div>
 						  </div>
 						  <!-- /.row -->
 
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="city">Numer domu</label>
+                    <input type="text" class="form-control" id="city" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+                    echo $viewmodel['building'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+                    echo $viewmodel['building'];} else {echo "Numer domu";}?>">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="street">Numer mieszkania</label>
+                    <input type="text" class="form-control" id="street" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+                    echo $viewmodel['appartment'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+                    echo $viewmodel['appartment'];} else {echo "Numer mieszkania";}?>">
+                  </div>
+                </div>
+              </div>
+              <!-- /.row -->
+
 						  <div class="row">
 							  <div class="col-sm-6">
 								  <div class="form-group">
 									  <label for="mail-code">Kod pocztowy</label>
-									  <input type="text" class="form-control" id="mail-code" placeholder="Kod pocztowy">
+									  <input type="text" class="form-control" id="mail-code" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+										echo $viewmodel['post_code'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+										echo $viewmodel['post_code'];} else {echo "Kod pocztowy";}?>">
 								  </div>
 							  </div>
 							  <!-- <div class="col-sm-6">
@@ -87,21 +113,21 @@
 				  <h5 class="card-header">Podsumowanie zamówienia</h5>
 				  <div class="card-body">
 					<!--  -->
-					<div>
+					<!-- <div>
 					  <span><strong>Kwota:</strong></span>
 
 					  <span>
 						39.00 zł
 					  </span>
-					</div>
+					</div> -->
 
 					<div>
 					  <span><strong>Wysyłka:</strong></span>
-
+<hr>
 					  <div class="form-check">
 						<label class="form-check-label">
 						  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="Dowóz" checked>
-						  Dowóz 15 zł
+						  Dowóz
 						</label>
 					  </div>
 
@@ -111,12 +137,12 @@
 						  Odbiór osobisty
 						</label>
 					  </div>
-
+<hr>
 					<div>
 					  <span><strong>Suma:</strong></span>
 
 					  <span>
-						39.00 zł
+						<?php echo $_SESSION['order_value']; ?> zł
 					  </span>
 					</div>
 

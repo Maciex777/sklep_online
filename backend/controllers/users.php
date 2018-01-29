@@ -18,4 +18,9 @@ class Users extends Controller{
 		header('Location: '.ROOT_URL);
 
 	}
+
+	protected function account(){
+		$viewmodel = new UserModel();
+		$this->returnView($viewmodel->account(), true);
+	}
 }

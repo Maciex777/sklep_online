@@ -21,7 +21,7 @@
         <input type="tel" name="phone" class="form-control"  placeholder="Numer telefonu" required="required">
       </div>
       </div>
-      <button type="submit" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-2" value="register">Zarejestruj się</button>
+      <button type="submit" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-2" value="register">Wyślij zgłoszenie</button>
       </form>
       <p class="mt-4 text-left">Masz już konto ?<a href="<?php echo ROOT_URL; ?>users/login"> Zaloguj się</a></p>
 

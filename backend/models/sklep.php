@@ -31,7 +31,7 @@ class SklepModel extends Model {
   public function produkt(){
 
     $this->product_id = $_GET['id'];
-    $_SESSION['now_id'] = $_GET['id'];
+  //  $_SESSION['now_id'] = $_GET['id'];
 
     if (isset($_POST['cart_action']) && $_POST['cart_action'] === "Dodaj do koszyka"){
 
@@ -78,24 +78,33 @@ class SklepModel extends Model {
   }
 
   public function koszyk(){
+    if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])){
     $items_in_cart = array();
     $_SESSION['product_value'] = array();
-    $_SESSION['order_value'] = null;
-    if (isset($_SESSION['cart'])){
+  //  $_SESSION['order_value'] = null;
+
     foreach ($_SESSION['cart'] as $id=>$count){
     $this->query('SELECT * FROM products WHERE product_id = :id');
     $this->bind(':id' , $id);
     $product = $this->single();
     array_push($items_in_cart,$product);
 
-    $_SESSION['order_value'] += ($product['product_cost']*$_SESSION['cart'][$product['product_id']]);
+  //  $_SESSION['order_value'] += ($product['product_cost']*$_SESSION['cart'][$product['product_id']]);
     $_SESSION['product_value'][$product['product_id']] = $_SESSION['cart'][$product['product_id']]*$product['product_cost'];
   }
-  return $items_in_cart;}
-}
+  return $items_in_cart;
+} else {
+  	header('Location: '.ROOT_URL);
+}}
 
 public function kasa(){
+if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true){
+  $this->query("SELECT * FROM users_adres_data WHERE user_id = :user_id");
+  $this->bind(":user_id" , $_SESSION['user_data']['id']);
+  $adres_data = $this->single();
 
+  return $adres_data;
+}
 
   return;
 }

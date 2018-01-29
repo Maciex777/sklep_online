@@ -29,7 +29,7 @@
 					<div class="row log-nav col-md-12 text-center text-md-right pt-3">
 						<div class="col-12 col-sm-6 col-md-8 col-lg-9 float-left text-md-right">
 						<?php if (isset($_SESSION['is_logged_in'])) { ?>
-							<a href="<?php echo ROOT_URL; ?>" class="pr-md-5 mr-md-5 pr-4 mr-4"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
+							<a href="<?php echo ROOT_URL; ?>/users/account" class="pr-md-5 mr-md-5 pr-4 mr-4"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
 
 							<a href="<?php echo ROOT_URL; ?>users/logout" class="pr-2"><i class="fa fa-user"></i> Wyloguj się</a>
 
@@ -41,7 +41,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 dropdown-basket">
 							<a class="basket float-right pr-xl-4" href="<?php echo ROOT_URL; ?>sklep/koszyk" title="koszyk">
-								<span class="amount pr-4">0 zł</span>
+								<span class="amount pr-4"><?php echo $_SESSION['order_value']; ?> zł</span>
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 							</a>
@@ -233,7 +233,7 @@
 		</div>
 	</footer> <!-- koniec stopki -->
 
-<!-- Strzałka przekierowująca do góry -->	
+<!-- Strzałka przekierowująca do góry -->
 <button id="myBtn" title="Go to top"></button>
 <script>
 //strzałka przekierowywująca na samą górę
