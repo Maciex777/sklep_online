@@ -34,9 +34,9 @@
 										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
 									</button> -->
 									<div class="quantity_selector">
-										<span class="minus" id="minus" data-id="<?php echo $item['product_id']; ?>" data-price="<?php echo $item['product_cost'];?>" data-count="<?php echo $_SESSION['cart'][$item['product_id']]; ?>"><i class="fa fa-minus"  aria-hidden="true"></i></span>
-										<span id="quantity_value"><?php echo $_SESSION['cart'][$item['product_id']]; ?></span>
-										<span class="plus" id="plus" data-id="<?php echo $item['product_id']; ?>" data-price="<?php echo $item['product_cost'];?>" data-count="<?php echo $_SESSION['cart'][$item['product_id']]; ?>"><i class="fa fa-plus"   aria-hidden="true"></i></span>
+										<!-- <span class="minus"  data-id="<?php //echo $item['product_id']; ?>" data-price="<?php //echo $item['product_cost'];?>" data-count="<?php //echo $_SESSION['cart'][$item['product_id']]; ?>"><i class="fa fa-minus"  aria-hidden="true"></i></span> -->
+										<span class="quantity_value" ><?php echo $_SESSION['cart'][$item['product_id']]; ?></span>
+										<!-- <span class="plus"  data-id="<?php //echo $item['product_id']; ?>" data-price="<?php //echo $item['product_cost'];?>" data-count="<?php //echo $_SESSION['cart'][$item['product_id']]; ?>"><i class="fa fa-plus"   aria-hidden="true"></i></span> -->
 									</div>
 									<!-- <input class="t-center num-product" type="text" name="num-product1" value="<?php //echo $_SESSION['cart'][$item['product_id']]; ?>" readonly="readonly"> -->
 
@@ -94,10 +94,10 @@
 	</main> <!-- koniec głównej treści strony -->
 	<script>
 	$(document).ready(function(){
-		$("#plus").click(function(){
-			var quantity = parseInt($("#quantity_value").text());
+		$(".plus").click(function(){
+			var quantity = parseInt($(this).siblings(".quantity_value").text());
 			quantity++;
-			$("#quantity_value").text(quantity);
+			$(this).siblings(".quantity_value").text(quantity);
 				var product_cost = $(this).attr("data-price");
 				var product_id = $(this).attr("data-id");
 				var product_count_now = quantity;
@@ -114,11 +114,11 @@
 		   });
 
 		});
-		$("#minus").click(function(){
-			var quantity = parseInt($("#quantity_value").text());
+		$(".minus").click(function(){
+			var quantity = parseInt($(this).siblings(".quantity_value").text());
 			quantity--;
 			if (quantity<=0){quantity = 1;}
-			$("#quantity_value").text(quantity);
+			$(this).siblings(".quantity_value").text(quantity);
 				var product_cost = $(this).attr("data-price");
 				var product_id = $(this).attr("data-id");
 				var product_count_now = quantity;
