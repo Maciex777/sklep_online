@@ -4,17 +4,17 @@ body{
 
 @media screen and (min-width: 1220px) {
 .navbar-nav{
-	margin-top:-17px;
+	margin-top:70px;
 }
 }
 @media screen and (max-width: 1300px) {
 .navbar-nav{
-	margin-top:30px;
+	margin-top:70px;
 }
 }
 @media screen and (min-width: 767px) and (max-width: 998px) {
 .navbar-nav{
-	margin:30px 0 0  16%;
+	margin:70px 0 0  16%;
 }
 }
 @media screen and (min-width: 576px) and (max-width: 767px) {
@@ -165,6 +165,40 @@ header .logo img:hover {
 	line-height:2;
 }
 
+#main-title{
+	font-size:2.2em;
+	position:absolute;
+	font-family: 'Cinzel', serif;
+	color:#9e6600;
+	letter-spacing:4px;
+}
+@media only screen and (max-width: 1440px) {
+	#main-title{
+	font-size:1.6em;
+	}
+}
+@media only screen and (max-width: 1305px) {
+	#main-title{
+	font-size:1.4em;
+	}
+}
+@media only screen and (max-width: 1115px) {
+	#main-title{
+	font-size:1.2em;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	#main-title{
+	width:300px;
+	text-align:center;
+	}
+}
+@media only screen and (max-width: 795px) {
+	#main-title{
+	display:none;
+	}
+}
+
 /* ikonka logowania */
 .log-nav .fa-user{
 	font-size:2.2em;
@@ -178,9 +212,10 @@ header .logo img:hover {
 .log-nav .fa-user:hover{
 	opacity:1;
 }
+
 #login, #logout, #welcome{
-	z-index:99999999999;
-	position:absolute;	
+		z-index:99999999999;
+		position:absolute;	
 }
 
 #login, #welcome{
@@ -195,11 +230,11 @@ header .logo img:hover {
 	font-size:2em;
 	position:relative;
 	right:8px;
-}	
 }
 #login{
 		position:relative;
 		right:auto;
+}
 }
 
 /* koszyk i cena w menu */
