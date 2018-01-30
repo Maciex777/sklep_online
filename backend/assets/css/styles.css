@@ -294,6 +294,12 @@ header .logo img:hover {
 .basket .fa-shopping-basket{
 	font-size:1.8em;
 }
+.basket:hover  .fa-shopping-basket{
+	color:#888888;
+}
+.dropdown-basket:hover  .fa-shopping-basket{
+	color:#888888;
+}
 
 /* Strona główna */
 
@@ -370,7 +376,20 @@ header .logo img:hover {
 
 /*tło produktów w zakładce produkty*/
 .product-background{
-	background-color:#ddd;	 
+	background-color:#e0dbc8;
+	font-weight:900;
+}
+.product-background h4, .product-background h3{
+	font-weight:900;
+}
+.product-background h4{
+	font-size:1.45em;
+}
+.product-background:hover h4, a:hover .product-background h3, a:hover .product-background p{
+	color:#fff !important;
+}
+.product-background:hover{
+	background-color:#434056;
 }
 
 /* Rozwijane listy w menu i koszyku */
