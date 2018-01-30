@@ -16,7 +16,7 @@
 		<div class="text-center" style="border-top:1px solid silver">
 			<h2 class="my-4"><strong><a href="<?php echo ROOT_URL;?>sklep/kategoria/<?php if ($_SESSION['category'] === "Pan") {echo "1";}else{echo "9";} ?> "><?php echo $_SESSION['category'];?></a> </strong></h2>
 			<hr>
-			<h3><?php echo $_SESSION['current_category']; ?></h3>
+			<h3> <a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $_SESSION['category_id']; ?>"> <?php echo $_SESSION['current_category']; ?></a></h3>
 		</div>
 
 

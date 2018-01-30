@@ -17,9 +17,9 @@
 							<?php }?>
 						  </div>
 						  <div class="text-center" style="border-top:1px solid silver">
-								<h2 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h2>
+								<h2 class="my-4"><strong><a href="<?php echo ROOT_URL;?>sklep/kategoria/<?php if ($_SESSION['category'] === "Pan") {echo "1";}else{echo "9";} ?> "><?php echo $_SESSION['category'];?></a> </strong></h2>
 								<hr>
-								<h3><?php echo $_SESSION['current_category']; ?></h3>
+								<h3> <a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $_SESSION['category_id']; ?>"> <?php echo $_SESSION['current_category']; ?></a></h3>
 						  </div>
 						</div>
 						<div class="col-lg-9 order-lg-2 order-1">
@@ -51,10 +51,12 @@
 							<span class="plus" id="plus"><i class="fa fa-plus"   aria-hidden="true"></i></span>
 						</div>
 					</div>
+					<div class="" id="count_in_cart_div">
 					<?php if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$viewmodel['product_id']]) && !$_SESSION['cart'][$viewmodel['product_id']] == null){ ?>
-					<div class="">
-						W koszyku: <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?>
-					</div><?php } ?>
+					<!-- <div class="" id="count_in_cart_div"> -->
+						W koszyku: <span id="count_in_cart"> <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?></span>
+					<!-- </div> --><?php } ?>
+					</div>
 					<button type="button" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-4" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
 				</div>
 			</div>
@@ -84,11 +86,20 @@ $(document).ready(function(){
         type: 'POST',
 				data: {product_cost , product_id , product_count},
         success:function(response){
- 							 location.reload();
+
 
  	        }
 
    });
+
+	 $("#cart_value").text(parseInt($("#cart_value").text()) + (product_cost*product_count));
+	 if ($("#count_in_cart").length){
+		$("#count_in_cart").text(parseInt($("#count_in_cart").text()) + product_count);
+	} else {
+		$("#count_in_cart_div").append("W koszyku: <span id=\"count_in_cart\"> </span>");
+		$("#count_in_cart").text(product_count);
+	}
+
 	});
 });
 </script>

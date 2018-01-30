@@ -41,7 +41,7 @@
 						</div>
 						<div class="col-sm-6 col-md-4 col-lg-3 dropdown-basket">
 							<a class="basket float-right pr-xl-4" href="<?php echo ROOT_URL; ?>sklep/koszyk" title="koszyk">
-								<span class="amount pr-4"><?php if (isset($_SESSION['order_value'])) {echo $_SESSION['order_value'];}else {echo "0";} ?> zł</span>
+								<span class="amount pr-4"><span id="cart_value"><?php if (isset($_SESSION['order_value'])) {echo $_SESSION['order_value'];}else {echo "0";} ?></span> zł</span>
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 							</a>
@@ -238,6 +238,17 @@
 <script>
 //strzałka przekierowywująca na samą górę
 var amountScrolled = 300;
+
+$(document).ready(function(){
+
+$.ajax({
+
+
+
+});
+
+
+});
 
 $(window).scroll(function() {
 	if ( $(window).scrollTop() > amountScrolled ) {
