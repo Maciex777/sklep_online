@@ -29,7 +29,7 @@
 				<div class="col-md-10 col-lg-9">
 					<div class="row log-nav col-md-12 text-center text-md-right pt-3">
 						<div class="col-12 col-sm-6 col-md-8 col-lg-9 float-left text-md-right">
-						<img class="img-fluid" id="main-title" src="<?php echo ROOT_URL; ?>assets/img/title.png" alt="tytuł strony">
+						<h2 id="main-title">Odzież dla seniorów</h2>
 						<?php if (isset($_SESSION['is_logged_in'])) { ?>
 							<a href="<?php echo ROOT_URL; ?>/users/account" class="pr-md-5 mr-md-5 pr-4 mr-4" id="welcome"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
 
@@ -91,7 +91,7 @@
 									<li class="dropdown menu-large nav-item"><a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
 										<ul class="dropdown-menu megamenu my-dropdown-menu">
 											<div class="row">
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Piżamy i rajstopy</li>
 													<li><a href="#">Pozycja 1</a>
@@ -103,7 +103,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Bielizna i getry</li>
 													<li><a href="#">Pozycja 1</a>
@@ -119,7 +119,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Bielizna</li>
 													<li><a href="#">Pozycja 1</a>
@@ -131,7 +131,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Spodnie</li>
 													<li><a href="#">Pozycja 1</a>
@@ -160,7 +160,7 @@
 									<li class="dropdown menu-large nav-item"><a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
 										<ul class="dropdown-menu megamenu my-dropdown-menu">
 											<div class="row">
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Bielizna</li>
 													<li><a href="#">Pozycja 1</a>
@@ -172,7 +172,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Piżamy i szlafroki</li>
 													<li><a href="#">Pozycja 1</a>
@@ -188,7 +188,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Podkoszulki</li>
 													<li><a href="#">Pozycja 1</a>
@@ -200,7 +200,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Spodnie</li>
 													<li><a href="#">Pozycja 1</a>

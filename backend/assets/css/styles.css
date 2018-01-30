@@ -42,7 +42,9 @@ body{
 
 .megamenu {
   padding: 20px 20px;
-  width: 100%;
+  
+  width:100vw;
+  left:-35%;
 }
 
 .megamenu > div > li > ul {
@@ -166,30 +168,31 @@ header .logo img:hover {
 }
 
 #main-title{
+	font-size:2.2em;
 	position:absolute;
-	right:40%;
+	font-family: 'Cinzel', serif;
+	color:#9e6600;
+	letter-spacing:4px;
 }
 @media only screen and (max-width: 1440px) {
 	#main-title{
-		width:370px;
-		right:35%;
+	font-size:1.6em;
 	}
 }
 @media only screen and (max-width: 1305px) {
 	#main-title{
-		width:320px;
+	font-size:1.4em;
 	}
 }
 @media only screen and (max-width: 1115px) {
 	#main-title{
-		width:295px;
+	font-size:1.2em;
 	}
 }
 @media only screen and (max-width: 1000px) {
 	#main-title{
-		top:42px;
-		right:20%;
-		width:250px;
+	width:300px;
+	text-align:center;
 	}
 }
 @media only screen and (max-width: 795px) {
@@ -348,16 +351,21 @@ header .logo img:hover {
 	margin:-10px 0 0 !important;
 }
 .dropdown > a:hover{
-	height:65px;
+	
 	color:#fff !important;
 }
 .dropdown-menu:hover ~ .dropdown{
 	color:#fff !important;
 }
 .dropdown>.my-dropdown-menu {
-	display:none;
+	opacity:0;
 	background-color:#2E1F27;
 	list-style:none;
+transition:0.5s opacity;
+visibility: hidden;
+display:Block;
+will-change: opacity;
+
 }
 .dropdown-basket{
 	z-index:99999999999;
@@ -377,6 +385,8 @@ header .logo img:hover {
   display: block;
   z-index:100;
   position:absolute;
+  visibility: visible;
+  opacity:1;
 }
 .dropdown-basket:hover>.my-dropdown-menu{
   display: block;
@@ -384,6 +394,8 @@ header .logo img:hover {
   position:absolute;
   right:10%;
   top:60px;
+  opacity:1;
+  visibility:visible;
 }
 .fixtop{position:absolute;top:0;right:0;left:0;z-index:1030}
 }
@@ -733,4 +745,14 @@ input.num-product::-webkit-inner-spin-button {
 }
 #myBtn:hover {
 	opacity:1;
+}
+
+/* Podświetlenie dropdown-heder  */
+.dropdown-header:hover{
+	color:gold;
+}
+
+/* Wyrównanie do środka zawartości dropdowna menu */
+.row {
+	justify-content: center;
 }
