@@ -374,7 +374,7 @@ header .logo img:hover {
 	font-size:22px;
 }
 
-/*tło produktów w zakładce produkty*/
+/*tło produktów i czcionki w zakładkach produkty i kategorie*/
 .product-background{
 	background-color:#e0dbc8;
 	font-weight:900;
@@ -390,6 +390,21 @@ header .logo img:hover {
 }
 .product-background:hover{
 	background-color:#434056;
+}
+
+/*nagłówek zakładek kategori i produktów*/
+.category-title{
+		border-top:1px solid silver;
+}
+
+/*znikanie bocznego obrazu pani lub pana w kategoriach i produktach*/
+@media only screen and (max-width: 992px) {
+.side-image{
+	display:none;
+}
+.category-title{
+	border-top:none;
+}
 }
 
 /* Rozwijane listy w menu i koszyku */
