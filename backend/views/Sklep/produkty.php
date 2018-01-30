@@ -69,7 +69,7 @@
                 </div>
 			  </a>
                 <div class="card-footer">
-                  <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="btn btn-primary">Zobacz</a>
+                  <a href="<?php echo ROOT_URL;?>sklep/produkt/<?php echo $product['product_id'];?> " class="btn my-button standard-buttons btn-lg w-100">Zobacz</a>
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
   <!-- STYLESHEET META -->
+<link href="https://fonts.googleapis.com/css?family=Cinzel:700&amp;subset=latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
@@ -28,8 +29,9 @@
 				<div class="col-md-10 col-lg-9">
 					<div class="row log-nav col-md-12 text-center text-md-right pt-3">
 						<div class="col-12 col-sm-6 col-md-8 col-lg-9 float-left text-md-right">
+						<img class="img-fluid" id="main-title" src="<?php echo ROOT_URL; ?>assets/img/title.png" alt="tytuł strony">
 						<?php if (isset($_SESSION['is_logged_in'])) { ?>
-							<a href="<?php echo ROOT_URL; ?>/users/account" class="pr-md-5 mr-md-5 pr-4 mr-4"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
+							<a href="<?php echo ROOT_URL; ?>/users/account" class="pr-md-5 mr-md-5 pr-4 mr-4" id="welcome"><?php echo $_SESSION['user_data']['name'];?>, witaj!</a>
 
 							<a href="<?php echo ROOT_URL; ?>users/logout" class="pr-2" id="logout"><i class="fa fa-user"></i> Wyloguj się</a>
 
@@ -45,20 +47,37 @@
 								<span class="count"></span>
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 							</a>
-							<ul class="my-dropdown-menu">
-								<li><a class="dropdown-item" href="#">Pozycja 1</a></li>
-								<div class="dropdown-divider"></div>
-								<li><a class="dropdown-item" href="#">Pozycja 2</a></li>
-								<div class="dropdown-divider"></div>
-								<li><a class="dropdown-item" href="#">Pozycja 3</a></li>
-								<div class="dropdown-divider"></div>
-								<li><a class="dropdown-item" href="#">Pozycja 4</a></li>
-								<div class="dropdown-divider"></div>
-								<li><p class="dropdown-item" href="#">Kwota:</p></li>
-								<div class="dropdown-divider"></div>
-								<li><a class="dropdown-item" href="./koszyk.html">Zobacz koszyk</a></li>
-								<li><a class="dropdown-item" href="./checkout.html">Zamówienie</a></li>
-							</ul>
+							<div class="my-dropdown-menu p-3">
+								<div class="row item">
+									<div class="col-5">
+										<img class="img-fluid d-flex flex-column" alt="zdjęcie produktu" src="<?php echo ROOT_URL; ?>assets/img/products/pani/dar_b.jpg" />
+									</div>
+									<div class="col-7">
+										<p class="h5 text-right">Biustonosz</p>
+										<p class="text-right"><b>29,00 zł</b></p>
+									</div>
+								</div>
+								<hr />
+								<div class="row">
+									<div class="col-6">
+										<p class="mb-0"><b>Suma:</b></p>
+									</div>
+									<div class="col-6">
+										<p class="mb-0 text-right gold-color"><b>29,00 zł</b></p>
+									</div>
+								</div>
+								<hr />
+								<div class="row">
+									<div class="col-12">
+										<a href="#" class="btn my-button btn-block mb-2">Pokaż koszyk</a>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12">
+										<a href="#" class="btn my-button btn-block">Zamówienie</a>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="row col-md-12">
