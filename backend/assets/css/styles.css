@@ -42,7 +42,9 @@ body{
 
 .megamenu {
   padding: 20px 20px;
-  width: 100%;
+  width:100vw;
+  left:-35%;
+  opacity:.97;
 }
 
 .megamenu > div > li > ul {
@@ -122,8 +124,24 @@ body{
 	object-fit: cover;
 }
 
+/*wielkkość czcionek w zakładce kontakt*/
+.contact-page{
+	font-size:1.2em;
+}
+
+.contact-header{
+	background-color:#fafaee ;
+	font-weight:600;
+	letter-spacing:1px;
+	
+}
+
 a:hover{
 	text-decoration:none;
+}
+
+a{
+	color:inherit;
 }
 
 /* navbar */
@@ -264,14 +282,6 @@ header .logo img:hover {
 
 /* Strona główna */
 
-.main_page{
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
-	background-image:url(../img/.jpg);
-}
-
 #pan, #pani{
 	display: block;
 	list-style: none;
@@ -315,7 +325,7 @@ header .logo img:hover {
 
 .img_hover, .my-button:hover{
 	text-decoration:none;
-	color:#fff;
+	color:#fff !important;
 	background-color:#2E1F27;
 	-webkit-transition: background-color 300ms linear;
 	-ms-transition: background-color 300ms linear;
@@ -343,12 +353,16 @@ header .logo img:hover {
 	font-size:22px;
 }
 
+/*tło produktów w zakładce produkty*/
+.product-background{
+	background-color:#ddd;	 
+}
+
 /* Rozwijane listy w menu i koszyku */
 .dropdown-menu{
 	margin:-10px 0 0 !important;
 }
 .dropdown > a:hover{
-	height:65px;
 	color:#fff !important;
 }
 .dropdown-menu:hover ~ .dropdown{
@@ -364,8 +378,14 @@ header .logo img:hover {
 }
 .dropdown-basket>.my-dropdown-menu {
 	display:none;
-	background-color:#F5F5F5;
+	background-color:#e0dbc8; 
+	border:1px solid #acaea2;
 	list-style:none;
+	border-radius:5px;
+}
+.dropdown-basket>.my-dropdown-menu a{
+	font-size:1em;
+	font-weight:600;
 }
 
 /* Responsywność */
