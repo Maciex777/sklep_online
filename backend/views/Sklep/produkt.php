@@ -9,14 +9,14 @@
 
 						<div class="col-lg-3">
 							<a href="<?php echo ROOT_URL; ?>sklep/produkty/<?php echo $viewmodel['product_category']; ?>" class="btn my-button standard-buttons btn-lg px-4 py-2 mt-5"><i class="fa fa-arrow-left pr-2" aria-hidden="true"></i> Wróć</a>
-						  <div class="pt-5">
+						  <div class="pt-5 side-image">
 							<?php if ($_SESSION['category'] === "Pan"){?>
 							  <a href="<?php echo ROOT_URL; ?>sklep/kategoria/1"><img src="<?php echo ROOT_URL;?>assets/img/dziad.png" alt="" class="rotate-object img-fluid" width="267"/></a>
 							<?php }else{?>
 							  <a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object img-fluid" width="267"/></a>
 							<?php }?>
 						  </div>
-						  <div class="text-center" style="border-top:1px solid silver">
+						  <div class="text-center category-title">
 								<h2 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h2>
 								<hr>
 								<h3><?php echo $_SESSION['current_category']; ?></h3>
@@ -52,8 +52,8 @@
 						</div>
 					</div>
 					<?php if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$viewmodel['product_id']]) && !$_SESSION['cart'][$viewmodel['product_id']] == null){ ?>
-					<div class="">
-						W koszyku: <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?>
+					<div class="pt-4">
+						W koszyku: &nbsp<strong> <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?></strong>
 					</div><?php } ?>
 					<button type="button" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-4" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
 				</div>
