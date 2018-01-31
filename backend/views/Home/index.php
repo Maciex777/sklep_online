@@ -6,7 +6,7 @@
 <!-- Główna treść strony -->
 <img id="main-background" src="<?php echo ROOT_URL; ?>assets/img/main-background.jpg" alt=""/>
 <main>
-	<div class="main_page h-100">
+	<div class="h-100">
 		<div class="container-fluid h-100">
 			<div class="row h-100 pb-5">
 				<div class="col-12">			

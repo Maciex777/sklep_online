@@ -3,15 +3,15 @@
   <div class="container">
 	<div class="row">
 
-              <div class="col-12 col-lg-8 mt-5 pt-5">
+              <div class="col-12 col-lg-8 mt-4 pt-5">
 				  <form method="post" action="checkout2.html">
-					  <h1>Zamówienie</h1>
+					  <h1 class="heading-font text-center pb-4">Zamówienie</h1>
 
 					  <div class="content pt-3">
 						  <div class="row">
 							  <div class="col-sm-6">
 								  <div class="form-group">
-									  <label for="firstname">Imię</label>
+									  <label  for="firstname">Imię</label>
 									  <input type="text" class="form-control" id="firstname" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
 										echo $_SESSION['user_data']['name'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
 										  echo $_SESSION['user_data']['name'];}else{echo "Imię";}?>">
@@ -48,28 +48,25 @@
 						  </div>
 						  <!-- /.row -->
 
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="city">Numer domu</label>
-                    <input type="text" class="form-control" id="city" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
-                    echo $viewmodel['building'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
-                    echo $viewmodel['building'];} else {echo "Numer domu";}?>">
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <label for="street">Numer mieszkania</label>
-                    <input type="text" class="form-control" id="street" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
-                    echo $viewmodel['appartment'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
-                    echo $viewmodel['appartment'];} else {echo "Numer mieszkania";}?>">
-                  </div>
-                </div>
-              </div>
-              <!-- /.row -->
-
 						  <div class="row">
-							  <div class="col-sm-6">
+							<div class="col-sm-4">
+							  <div class="form-group">
+								<label for="city">Numer domu</label>
+								<input type="text" class="form-control" id="city" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+								echo $viewmodel['building'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+								echo $viewmodel['building'];} else {echo "Numer domu";}?>">
+							  </div>
+							</div>
+							<div class="col-sm-4">
+							  <div class="form-group">
+								<label for="street">Numer mieszkania</label>
+								<input type="text" class="form-control" id="street" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+								echo $viewmodel['appartment'];}?>" placeholder="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
+								echo $viewmodel['appartment'];} else {echo "Numer mieszkania";}?>">
+							  </div>
+							</div>
+
+							  <div class="col-sm-4">
 								  <div class="form-group">
 									  <label for="mail-code">Kod pocztowy</label>
 									  <input type="text" class="form-control" id="mail-code" value="<?php if(isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true ){
@@ -77,13 +74,10 @@
 										echo $viewmodel['post_code'];} else {echo "Kod pocztowy";}?>">
 								  </div>
 							  </div>
-							  <!-- <div class="col-sm-6">
-								  <div class="form-group">
-									  <label for="country">Kraj</label>
-									  <select class="form-control" id="country"></select>
-								  </div>
-							  </div> -->
-
+						  </div>
+						  <!-- /.row -->
+						  
+						  <div class="row">
 							  <div class="col-sm-6">
 								  <div class="form-group">
 									  <label for="phone">Numer telefonu</label>
@@ -101,8 +95,7 @@
 								  </div>
 							  </div>
 
-						  </div>
-						  <!-- /.row -->
+						  </div>	 <!-- /.row -->
 					  </div>
 				  </form>
 			</div>
@@ -123,7 +116,7 @@
 
 					<div>
 					  <span><strong>Wysyłka:</strong></span>
-<hr>
+					<hr>
 					  <div class="form-check">
 						<label class="form-check-label">
 						  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="Dowóz" checked>
@@ -137,7 +130,7 @@
 						  Odbiór osobisty
 						</label>
 					  </div>
-<hr>
+					<hr>
 					<div>
 					  <span><strong>Suma:</strong></span>
 
