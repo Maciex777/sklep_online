@@ -48,33 +48,27 @@
 								<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 							</a>
 							<div class="my-dropdown-menu p-3">
-								<div class="row item">
-									<div class="col-5">
-										<img class="img-fluid d-flex flex-column" alt="zdjęcie produktu" src="<?php echo ROOT_URL; ?>assets/img/products/pani/dar_b.jpg" />
-									</div>
-									<div class="col-7">
-										<p class="h5 text-right">Biustonosz</p>
-										<p class="text-right"><b>29,00 zł</b></p>
-									</div>
-								</div>
+								<div id="mini-cart">
+
+							</div>
 								<hr />
 								<div class="row">
 									<div class="col-6">
 										<p class="mb-0"><b>Suma:</b></p>
 									</div>
 									<div class="col-6">
-										<p class="mb-0 text-right gold-color"><b>29,00 zł</b></p>
+										<p class="mb-0 text-right gold-color"><b><?php if (isset($_SESSION['order_value'])) {echo $_SESSION['order_value'];}else {echo "0";} ?> zł</b></p>
 									</div>
 								</div>
 								<hr />
 								<div class="row">
 									<div class="col-12">
-										<a href="#" class="btn my-button btn-block mb-2">Pokaż koszyk</a>
+										<a href="<?php echo ROOT_URL;?>sklep/koszyk" class="btn my-button btn-block mb-2">Pokaż koszyk</a>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-12">
-										<a href="#" class="btn my-button btn-block">Zamówienie</a>
+										<a href="<?php echo ROOT_URL; ?>sklep/kasa" class="btn my-button btn-block">Zamówienie</a>
 									</div>
 								</div>
 							</div>
@@ -260,14 +254,40 @@ var amountScrolled = 300;
 
 $(document).ready(function(){
 
+
+
 $.ajax({
 
-
-
+url : "<?php echo ROOT_URL;?>views/koszyk.php",
+type: "post",
+dataType: 'json',
+success : function(response) {
+//alert(Object.keys(response).length)
+$.each(response,function(i, value){
+	var cart_item;
+	 cart_item = "<div class=\"row item\"><div class=\"col-5\"><img class=\"img-fluid d-flex flex-column\" alt=\""+value['product_name']+"\" src=\"<?php echo ROOT_URL; ?>"+value['product_image']+"\" /></div><div class=\"col-7\"><p class=\"h5 text-right\">"+value['product_name']+"</p><p class=\"text-right\"><b class=\"count-item\"></b><b>"+value['product_cost']+"zł</b></p></div></div>";
+	 $("#mini-cart").append(cart_item);
+});
+}
+});
 });
 
-
-});
+// $("#add_to_cart").click(function(){
+// 	var product_cost = <?php //echo $viewmodel['product_cost'];?>;
+// 	var product_id = <?php //echo $viewmodel['product_id']; ?>;
+// 	var product_count = parseInt($("#quantity_value").text());
+// 	$.ajax({
+// 			url: '<?php //echo ROOT_URL; ?>views/Sklep/Addtocart.php',
+// 			type: 'POST',
+// 			data: {product_cost , product_id , product_count},
+// 			success:function(response){
+//
+//
+// 				}
+//
+//  });
+//
+// });
 
 $(window).scroll(function() {
 	if ( $(window).scrollTop() > amountScrolled ) {

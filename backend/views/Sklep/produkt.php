@@ -99,7 +99,21 @@ $(document).ready(function(){
 		$("#count_in_cart_div").append("W koszyku: <span id=\"count_in_cart\"> </span>");
 		$("#count_in_cart").text(product_count);
 	}
+	$("#mini-cart").text(" ");
+	$.ajax({
 
+	url : "<?php echo ROOT_URL;?>views/koszyk.php",
+	type: "post",
+	dataType: 'json',
+	success : function(response) {
+	//alert(Object.keys(response).length)
+	$.each(response,function(i, value){
+		var cart_item;
+		 cart_item = "<div class=\"row item\"><div class=\"col-5\"><img class=\"img-fluid d-flex flex-column\" alt=\""+value['product_name']+"\" src=\"<?php echo ROOT_URL; ?>"+value['product_image']+"\" /></div><div class=\"col-7\"><p class=\"h5 text-right\">"+value['product_name']+"</p><p class=\"text-right\"><b class=\"count-item\"></b><b>"+value['product_cost']+"zł</b></p></div></div>";
+		 $("#mini-cart").append(cart_item);
+	});
+	}
+	});
 	});
 });
 </script>
