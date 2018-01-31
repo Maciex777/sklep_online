@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
   <!-- STYLESHEET META -->
-<link href="https://fonts.googleapis.com/css?family=Cinzel:700&amp;subset=latin-ext" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet"> 
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
@@ -49,8 +48,7 @@
 							</a>
 							<div class="my-dropdown-menu p-3">
 								<div id="mini-cart">
-
-							</div>
+								</div>
 								<hr />
 								<div class="row">
 									<div class="col-6">
@@ -249,12 +247,7 @@
 <!-- Strzałka przekierowująca do góry -->
 <button id="myBtn" title="Go to top"></button>
 <script>
-//strzałka przekierowywująca na samą górę
-var amountScrolled = 300;
-
 $(document).ready(function(){
-
-
 
 $.ajax({
 
@@ -288,6 +281,18 @@ $.each(response,function(i, value){
 //  });
 //
 // });
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('#myBtn').fadeIn('slow');
+	} else {
+		$('#myBtn').fadeOut('slow');
+	}
+});
+
+
+//strzałka przekierowywująca na samą górę
+var amountScrolled = 300;
 
 $(window).scroll(function() {
 	if ( $(window).scrollTop() > amountScrolled ) {
