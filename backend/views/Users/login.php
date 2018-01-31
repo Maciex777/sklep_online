@@ -1,11 +1,9 @@
-
-
 <main>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mx-auto">
+            <div class="col-md-6 mt-3 mx-auto">
                 <div class="block">
-                    <h2 class="text-center pt-4 pb-4">Zaloguj się do sklepu</h2>
+                    <h2 class="heading-font text-center pt-5 pb-4">Zaloguj się do sklepu</h2>
                     <?php if ($viewmodel != ""){?>
                     <h5 class="text-center pt-4 pb-4" style="color:red;"><?php echo $viewmodel ?></h5>
                   <?php } ?>

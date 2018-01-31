@@ -4,8 +4,8 @@
   <div class="row">
     <div class="col-md-8 mx-auto mt-4">
     <div class="block text-center">
-      <h2 class="text-center">Utwórz konto</h2>
-      <p class="text-justify py-4"> Dla Twojej wygody uprościliśmy proces rejestracji w sklepie Halka. <br/>Podaj swoje dane a nasza obsługa klienta skontaktuje się z Tobą telefonicznie w przeciągu 24 godzin w celu założenia konta na Halka.com.pl</p>
+      <h2 class="heading-font text-center mt-5">Utwórz konto</h2>
+      <p class="text-center py-4"> Dla Twojej wygody uprościliśmy proces rejestracji w sklepie Halka. <br/>Podaj swoje dane a nasza obsługa klienta skontaktuje się z Tobą telefonicznie w przeciągu 24 godzin w celu założenia konta na Halka.com.pl</p>
       <form class="text-left clearfix mt-30" action="<?php echo ROOT_URL; ?>mailer/mail.php" method="post">
       <div class="row">
 	  <div class="form-group col-12 col-md-6">
