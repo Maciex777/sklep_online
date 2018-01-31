@@ -16,10 +16,12 @@
 							  <a href="<?php echo ROOT_URL; ?>sklep/kategoria/9"><img src="<?php echo ROOT_URL;?>assets/img/baba.png" alt="" class="rotate-object img-fluid" width="267"/></a>
 							<?php }?>
 						  </div>
-						  <div class="text-center category-title">
-								<h2 class="my-4"><strong><?php echo $_SESSION['category'];?></strong></h2>
+
+						  <div class="text-center" style="border-top:1px solid silver">
+								<h2 class="my-4"><strong><a href="<?php echo ROOT_URL;?>sklep/kategoria/<?php if ($_SESSION['category'] === "Pan") {echo "1";}else{echo "9";} ?> "><?php echo $_SESSION['category'];?></a> </strong></h2>
+
 								<hr>
-								<h3><?php echo $_SESSION['current_category']; ?></h3>
+								<h3> <a href="<?php echo ROOT_URL;?>sklep/produkty/<?php echo $_SESSION['category_id']; ?>"> <?php echo $_SESSION['current_category']; ?></a></h3>
 						  </div>
 						</div>
 						<div class="col-lg-9 order-lg-2 order-1">
@@ -51,10 +53,14 @@
 							<span class="plus" id="plus"><i class="fa fa-plus"   aria-hidden="true"></i></span>
 						</div>
 					</div>
+					<div class="" id="count_in_cart_div">
 					<?php if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$viewmodel['product_id']]) && !$_SESSION['cart'][$viewmodel['product_id']] == null){ ?>
-					<div class="pt-4">
-						W koszyku: &nbsp<strong> <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?></strong>
-					</div><?php } ?>
+
+					<!-- <div class="" id="count_in_cart_div"> -->
+						W koszyku: <span id="count_in_cart"> <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?></span>
+					<!-- </div> --><?php } ?>
+					</div>
+
 					<button type="button" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-4" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
 				</div>
 			</div>
@@ -84,11 +90,34 @@ $(document).ready(function(){
         type: 'POST',
 				data: {product_cost , product_id , product_count},
         success:function(response){
- 							 location.reload();
+
 
  	        }
 
    });
+
+	 $("#cart_value").text(parseInt($("#cart_value").text()) + (product_cost*product_count));
+	 if ($("#count_in_cart").length){
+		$("#count_in_cart").text(parseInt($("#count_in_cart").text()) + product_count);
+	} else {
+		$("#count_in_cart_div").append("W koszyku: <span id=\"count_in_cart\"> </span>");
+		$("#count_in_cart").text(product_count);
+	}
+	$("#mini-cart").text(" ");
+	$.ajax({
+
+	url : "<?php echo ROOT_URL;?>views/koszyk.php",
+	type: "post",
+	dataType: 'json',
+	success : function(response) {
+	//alert(Object.keys(response).length)
+	$.each(response,function(i, value){
+		var cart_item;
+		 cart_item = "<div class=\"row item\"><div class=\"col-5\"><img class=\"img-fluid d-flex flex-column\" alt=\""+value['product_name']+"\" src=\"<?php echo ROOT_URL; ?>"+value['product_image']+"\" /></div><div class=\"col-7\"><p class=\"h5 text-right\">"+value['product_name']+"</p><p class=\"text-right\"><b class=\"count-item\"></b><b>"+value['product_cost']+"zł</b></p></div></div>";
+		 $("#mini-cart").append(cart_item);
+	});
+	}
+	});
 	});
 });
 </script>

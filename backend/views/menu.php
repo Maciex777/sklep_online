@@ -1,7 +1,30 @@
 <?php
-$this->query('SELECT * FROM menu');
-$this->resulSet();
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "driada_halka");
+class Menu {
+  protected $sql;
+  protected $menu;
 
+public function menu(){
+  $this->sql = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME.";charset=utf8", DB_USER, DB_PASS);
+  $this->sql->query("SELECT * FROM menu");
+  $menu = $this->sql->execute();
+  echo "<pre>";
+  print_r($menu);
+  echo "</pre>";
+}
+
+
+
+public function subMenu(){
+
+}
+}
+
+$menu_all = new Menu();
+$menu = $menu_all->menu();
 ?>
 <div class="row col-md-12">
   <nav class="fixtop navbar navbar-expand-md navbar-light mx-auto mx-sm-0">
