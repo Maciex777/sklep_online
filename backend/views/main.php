@@ -77,7 +77,7 @@
 					<div class="row col-md-12">
 						<nav class="fixtop navbar navbar-expand-md navbar-light mx-auto mx-md-0">
 							<div class="container">
-        						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        						<button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 									<span class="navbar-toggler-icon"></span> MENU
 								</button>
 								<div class="navbar-collapse collapse" id="collapsibleNavbar">
