@@ -1,5 +1,5 @@
 body{
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 @media screen and (min-width: 1220px) {
@@ -145,10 +145,16 @@ body{
 }
 
 .contact-header{
-	background-color:#fafaee;
-	font-weight:600;
+	font-weight:400;
 	letter-spacing:1px;
-	
+	font-size:1em;
+}
+
+/*czcionki w nagłówkach*/
+.heading-font{
+	font-weight: 300;
+	font-size: 39px;
+	font-family: 'Lato', sans-serif;
 }
 
 a:hover{
@@ -377,10 +383,10 @@ header .logo img:hover {
 /*tło produktów i czcionki w zakładkach produkty i kategorie*/
 .product-background{
 	background-color:#e0dbc8;
-	font-weight:900;
+	font-weight:700;
 }
 .product-background h4, .product-background h3{
-	font-weight:900;
+	font-weight:700;
 }
 .product-background h4{
 	font-size:1.45em;
@@ -395,6 +401,9 @@ header .logo img:hover {
 /*nagłówek zakładek kategori i produktów*/
 .category-title{
 		border-top:1px solid silver;
+		letter-spacing:1px; 
+		font-weight:900; 
+
 }
 
 /*znikanie bocznego obrazu pani lub pana w kategoriach i produktach*/
@@ -724,10 +733,10 @@ input.num-product::-webkit-inner-spin-button {
 .product_details_title p{
 	margin-top: 12px;
 	font-size: 1.1em;
+	letter-spacing:.02em;
 }
 .free_delivery{
 	background: #f5f5f5;
-	margin-top: 53px;
 }
 .free_delivery span{
 	display: inline-block;
