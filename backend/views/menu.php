@@ -16,8 +16,8 @@ class Menu {
 
       if ($menu_item['parent'] == 1){
     echo    "
-    <li class=\"dropdown menu-large nav-item\"><a href=\"". ROOT_URL.$menu_item['link'].$menu_item['id_in_child']."\" class=\"nav-link dropdown-toggle\">".$menu_item['main']."</a>
-          <ul class=\"dropdown-menu megamenu my-dropdown-menu\">
+    <li class=\"dropdown menu-large nav-item\" id=\"js-menu-".strtolower($menu_item['main'])."\"><a href=\"". ROOT_URL.$menu_item['link'].$menu_item['id_in_child']."\" class=\"nav-link dropdown-toggle\">".$menu_item['main']."</a>
+          <ul class=\"dropdown-menu megamenu my-dropdown-menu\" id=\"js-dropdown-".strtolower($menu_item['main'])."\">
             <div class=\"row\">";
             $this->subMenu($menu_item['id_in_child'],$db);
             echo "</div>
