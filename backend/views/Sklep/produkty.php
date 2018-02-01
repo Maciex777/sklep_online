@@ -1,5 +1,4 @@
 <!-- Główna treść strony -->
-<?php //echo "<pre>"; print_r($viewmodel); echo"</pre>";?>
 <main>
   <div class="container">
 

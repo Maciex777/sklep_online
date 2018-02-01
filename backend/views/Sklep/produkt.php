@@ -32,8 +32,7 @@
 				<div class="w-100">
 					<div class="product_details_title">
 						<h2><?php echo $viewmodel['product_name']; ?></h2>
-						<p><?php echo $viewmodel['product_description']; ?></p>
-					<button type="button" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-2" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
+					<button type="button" class="btn my-button standard-buttons btn-lg px-5 py-2 my-3" name="dodaj" id = "add_to_cart" >Dodaj do koszyka</button>
 					</div>
 					<div class="free_delivery d-flex flex-row align-items-center justify-content-center mt-4">
 						<span> darmowa dostawa</span>
@@ -52,10 +51,11 @@
 							<span class="plus" id="plus"><i class="fa fa-plus"   aria-hidden="true"></i></span>
 						</div>
 					</div>
-					<div class="pt-4" id="count_in_cart_div">
+					<div class="py-4" id="count_in_cart_div">
 					<?php if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$viewmodel['product_id']]) && !$_SESSION['cart'][$viewmodel['product_id']] == null){ ?>
 						W koszyku: &nbsp;<strong id="count_in_cart"> <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?></strong>
 					</div><?php } ?>
+					<p><?php echo $viewmodel['product_description']; ?></p>
 					<a type="button" href="<?php echo ROOT_URL; ?>sklep/koszyk" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-4" >Przejdź do koszyka</a>
 				</div>
 			</div>
@@ -89,7 +89,7 @@ $(document).ready(function(){
  	        }
 
    });
-
+   
 		$("#cart_value").text(parseInt($("#cart_value").text()) + (product_cost*product_count));
 		 if ($("#count_in_cart").length){
 			$("#count_in_cart").text(parseInt($("#count_in_cart").text()) + product_count);
@@ -99,7 +99,7 @@ $(document).ready(function(){
 		}
 	  $("#mini-cart").text(" ");
 		$.ajax({
-
+	
 		url : "<?php echo ROOT_URL;?>views/koszyk.php",
 		type: "post",
 		dataType: 'json',
