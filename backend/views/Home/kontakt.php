@@ -38,7 +38,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row">							
 							<div class="col-md-6 text-md-left">
 								<div class="form-group">
 									<label for="email" class="pt-1 pl-2 font-weight-bold">Email <span class="text-muted"> *</span></label>
@@ -52,10 +52,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="row">
+						<div class="row">									
 							<div class="col-md-12 text-md-left">
 								<input hidden="hidden" type="text" name="form_type" value="kontakt">
-								<div class="col-md-12 text-left"><input type="submit" name="submit" id="submit" value="Wyślij wiadomość" class="btn my-button standard-buttons btn-block"></div>
+								<div class="col-md-12 text-left"><input type="submit" name="submit" value="Wyślij wiadomość" class="btn my-button standard-buttons btn-block submit"></div>
 							</div>
 							<h6 class="text-muted text-left p-3">* Pole opcjonalne - podaj swój adres e-mail, a wyślemy Ci wiadomość weryfikującą przychodzące połączenie telefoniczne</h6>
 						</div>
@@ -64,10 +64,3 @@
 			  </div> <!-- koniec row contact-page -->
 		</div> <!-- koniec container -->
 	</main> <!-- koniec głównej treści strony -->
-<script type="text/javascript">
-
-	$("#submit").click(function(){
-		alert("Dziękujemy za wysłanie prośby o kontakt. Proszę oczekiwać kontaktu telefonicznego.")
-	})
-
-</script>

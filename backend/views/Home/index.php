@@ -1,8 +1,3 @@
-<!-- <div class="text-center">
-	<h1>Welcome To ShareBoard</h1>
-	<p class="lead">Find something cool? Share it with our community. Look at other shares as well</p>
-	<a class="btn btn-primary text-center" href="<?php //echo ROOT_PATH;?>shares">Share Now</a>
-</div> -->
 <!-- Główna treść strony -->
 <img id="main-background" src="<?php echo ROOT_URL; ?>assets/img/main-background.jpg" alt=""/>
 <main>
@@ -24,20 +19,3 @@
 		</div>
 	</div>
 </main> <!-- koniec głównej treści strony -->
-
-<script type="text/javascript">
-$(document).ready(function(){
- $("#pani > div > .main-category > img").hover(function () {
-    $("#pani .main-buttons").toggleClass("img_hover");
- });
-  $("#pan > div > .main-category > img").hover(function () {
-    $("#pan .main-buttons").toggleClass("img_hover");
- });
-  $("#pani .main-buttons").hover(function () {
-    $("#pani > div > .main-category > img").toggleClass("button_hover");
- });
-   $("#pan .main-buttons").hover(function () {
-    $("#pan > div > .main-category > img").toggleClass("button_hover");
- });
-});
-</script>
