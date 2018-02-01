@@ -137,6 +137,7 @@ body{
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
+	z-index:-1;
 }
 
 /*wielkkość czcionek w zakładce kontakt*/
@@ -811,4 +812,19 @@ input.num-product::-webkit-inner-spin-button {
 }
 #myBtn:hover {
 	opacity:1;
+}
+
+footer{
+	margin-top:15%;
+	background-color: #2E1F27;
+	color:#fff;
+}
+
+footer h4{
+	font-size:1.7em;
+}
+
+footer li{
+	padding: 5px 0;
+	font-size:1.1em;
 }
