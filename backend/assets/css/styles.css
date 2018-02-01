@@ -137,6 +137,7 @@ body{
 	width: 100vw;
 	height: 100vh;
 	object-fit: cover;
+	z-index:-1;
 }
 
 /*wielkkość czcionek w zakładce kontakt*/
@@ -149,6 +150,7 @@ body{
 	letter-spacing:1px;
 	font-size:1em;
 }
+
 /*czcionki w nagłówkach*/
 .heading-font{
 	font-weight: 300;
@@ -334,28 +336,6 @@ header .logo img:hover {
     -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
-
-/* Strona O Sklepie */
-/* 
-.jumbotron {
-	background-color: #FFFFFF;
-}
-.jumbotron h1 {
-	font-weight: bold;
-	color: #444444;
-}
-.jumbotron p {
-	color: #444444;
-	text-align: justify;
-	text-justify: inter-word;
-	font-size: 1.3em !important;
-} */
-.about h1 {
-	font-weight: bold;
-	color: #444444;
-}
-
-
 
 /*wygląd przycisków*/
 .my-button{
@@ -832,4 +812,19 @@ input.num-product::-webkit-inner-spin-button {
 }
 #myBtn:hover {
 	opacity:1;
+}
+
+footer{
+	margin-top:15%;
+	background-color: #2E1F27;
+	color:#fff;
+}
+
+footer h4{
+	font-size:1.7em;
+}
+
+footer li{
+	padding: 5px 0;
+	font-size:1.1em;
 }
