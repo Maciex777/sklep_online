@@ -84,7 +84,7 @@
 								<!--	<li class="dropdown menu-large nav-item"><a href="<?php //echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
 										<ul class="dropdown-menu megamenu my-dropdown-menu">
 											<div class="row">
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Piżamy i rajstopy</li>
 													<li><a href="#">Pozycja 1</a>
@@ -96,7 +96,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Bielizna i getry</li>
 													<li><a href="#">Pozycja 1</a>
@@ -112,7 +112,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Bielizna</li>
 													<li><a href="#">Pozycja 1</a>
@@ -124,7 +124,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Spodnie</li>
 													<li><a href="#">Pozycja 1</a>
@@ -153,7 +153,7 @@
 									<li class="dropdown menu-large nav-item"><a href="<?php //echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
 										<ul class="dropdown-menu megamenu my-dropdown-menu">
 											<div class="row">
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Bielizna</li>
 													<li><a href="#">Pozycja 1</a>
@@ -165,7 +165,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Piżamy i szlafroki</li>
 													<li><a href="#">Pozycja 1</a>
@@ -181,7 +181,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Podkoszulki</li>
 													<li><a href="#">Pozycja 1</a>
@@ -193,7 +193,7 @@
 													<li class="divider"></li>
 												</ul>
 											</li>
-											<li class="col-md-3">
+											<li class="col-md-2">
 												<ul>
 													<li class="dropdown-header">Spodnie</li>
 													<li><a href="#">Pozycja 1</a>
@@ -236,8 +236,19 @@
 <!-- Stopka -->		
 <footer>
 		<div class="container text-center text-md-left pt-5">
-			<div class="row pt-4">
-			  <div class="col-md-4 col-sm-12">
+			<div class="row pt-1">
+			<div class="is-bordered-mobile col-md-3 col-sm-12">
+				<!--Column1-->
+				<div class="footer-pad">
+				<div class="col-12 text-center ">
+				<a href="<?php echo ROOT_URL; ?>" class="logo" >
+				<img class="img-fluid logo-footer " src="<?php echo ROOT_URL; ?>assets/img/logo.png" alt="logo"></a>
+
+				<h5 class="halka"><strong>Sklep z Odzieżą dla seniora</strong></h5>
+			  </div>
+				</div>
+			  </div>
+			  <div class="col-md-3 col-sm-12">
 				<!--Column1-->
 				<div class="footer-pad">
 				  <h4>Kontakt</h4>
@@ -257,7 +268,7 @@
 					</address>
 				</div>
 			  </div>
-			  <div class="col-md-4 col-sm-12">
+			  <div class="is-bordered-mobile col-md-3 col-sm-12">
 				<!--Column1-->
 				<div class="footer-pad">
 				  <h4>Katalog produktów</h4>
@@ -267,23 +278,22 @@
 				  </ul>
 				</div>
 			  </div>
-			  <div class="col-md-4 col-sm-12">
+			  <div class="is-bordered-mobile col-md-3 col-sm-12">
 				<!--Column1-->
 				<div class="footer-pad">
 				  <h4>Informacje o sklepie</h4>
 				  <ul class="list-unstyled">
 					<li><a href="<?php echo ROOT_URL; ?>home/about">O nas</a></li>
 					<li><a href="<?php echo ROOT_URL; ?>home/regulamin">Regulamin</a></li>
+					<li><a href="<?php echo ROOT_URL; ?>home/regulamin">Cookie</a></li>
 				  </ul>
 				</div>
 			  </div>
-			</div>
+			</div> 
 			<hr>
 			<div class="row">
-				<div class="col-12 text-center pt-5">
-				  <h5 class="halka"><strong>Halka - Sklep z Odzieżą dla seniora</strong></h5>
-				</div>
-				<div class="col-12 py-4 text-center">
+				
+				<div class="col-12 py-1 text-center">
 					<p> <strong>&copy; Halka 2018</strong></p>
 				</div>
 			</div>			
