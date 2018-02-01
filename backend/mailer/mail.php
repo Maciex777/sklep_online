@@ -1,4 +1,5 @@
 <?php
+include ("../config.php");
 require_once "./PEAR/Mail.php";
 // Mail.php w tym samym katalogu oraz katalogi Net i Mail wymagane
 class Maile {
@@ -179,4 +180,5 @@ class Maile {
         $kontakt->mailSend_copy($subject,$message);
 
       }
+      header('Location: '.ROOT_URL);
       ?>

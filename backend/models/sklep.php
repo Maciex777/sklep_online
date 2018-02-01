@@ -17,6 +17,7 @@ class SklepModel extends Model {
 
     if($category){
       $_SESSION['category'] = ucwords(str_replace('_',' ',$category['category']));
+      $_SESSION['parent_category_id'] = $category['parent_category_id'];
 
     }
 
@@ -55,6 +56,7 @@ class SklepModel extends Model {
 
     if($category){
       $_SESSION['category'] = ucwords(str_replace('_',' ',$category['category']));
+      $_SESSION['current_category'] = ucwords(str_replace('_',' ',$category['category']));
     }
 
     $this->query('SELECT * FROM products WHERE product_id = :product_id');
@@ -68,12 +70,30 @@ class SklepModel extends Model {
     $this->query('SELECT * FROM categories WHERE id = :category_id');
     $this->bind(':category_id' , $this->id_category);
     $category = $this->single();
+    if ($category['parent_category_id'] == 0){
       $_SESSION['category_id'] = $category['id'];
+    } else {
+      $_SESSION['category_id'] = $category['parent_category_id']; }
+      if ($category['is_parent'] == 1){
+        $_SESSION['current_category'] = ucfirst(str_replace('_',' ',$category['category']));
+        $this->query('SELECT * FROM categories WHERE parent_category_id = :parent_id');
+        $this->bind(':parent_id' , $this->id_category);
+        $categories = $this->resultSet();
+        $products = array();
+        foreach ($categories as $cat){
+          $this->query('SELECT * FROM products WHERE product_category = :category_id');
+          $this->bind(':category_id' , $cat['id']);
+          $products_partial = $this->resultSet();
+          $products = array_merge($products,$products_partial);
+          //array_push($products,$products_partial);
+        }
+      }else{
 
     $_SESSION['current_category'] = ucfirst(str_replace('_',' ',$category['category']));
     $this->query('SELECT * FROM products WHERE product_category = :id_category');
     $this->bind(':id_category' , $this->id_category);
     $products= $this->resultSet();
+    }
     return $products;
   }
 

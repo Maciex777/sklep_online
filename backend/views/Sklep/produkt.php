@@ -89,7 +89,7 @@ $(document).ready(function(){
  	        }
 
    });
-   
+
 		$("#cart_value").text(parseInt($("#cart_value").text()) + (product_cost*product_count));
 		 if ($("#count_in_cart").length){
 			$("#count_in_cart").text(parseInt($("#count_in_cart").text()) + product_count);
@@ -99,7 +99,7 @@ $(document).ready(function(){
 		}
 	  $("#mini-cart").text(" ");
 		$.ajax({
-	
+
 		url : "<?php echo ROOT_URL;?>views/koszyk.php",
 		type: "post",
 		dataType: 'json',
