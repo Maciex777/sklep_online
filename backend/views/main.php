@@ -234,15 +234,35 @@
 
 
 	<!-- Stopka -->
-	<footer>
-		<div class="container">
-			<div class="row col-12 pb-3 pt-5 clearfix">
-				<div class="col-12 text-right">
-					<p>&copy; Halka 2018</p>
-				</div>
+<footer>
+	<div class="py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center align-self-center">
+          <p class="halka"><strong>Halka - Sklep z Odzieżą dla seniora</strong></p>
+					<p class="adress">Adressssss</p>
+					<p class="tel">tel. (+48) 456-7890 </p>	
+					<div class="pt-5 my-3 row">
+            <div class="col-4">
+              <a href="https://www.facebook.com" target="_blank"><i class="fa fa-3x fa-facebook"></i></a>
+            </div>
+            <div class="col-4">
+              <a href="https://twitter.com" target="_blank"><i class="fa fa-3x fa-twitter"></i></a>
+            </div>
+            <div class="col-4">
+              <a href="https://www.instagram.com" target="_blank"><i class="fa fa-3x fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 pb-3 pt-5 clearfix text-center align-self-center">
+          <p> <strong>&copy; Halka 2018</strong></p>
+        </div>
 			</div>
-		</div>
-	</footer> <!-- koniec stopki -->
+	</div>
+</footer> 
+<!-- koniec stopki -->
 
 <!-- Strzałka przekierowująca do góry -->
 <button id="myBtn" title="Go to top"></button>

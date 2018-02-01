@@ -8,10 +8,10 @@
 					<p class="lead pt-3">Działamy w branży odzieżowej z powodzeniem od ponad 20 lat. Wieloletnie doświadczenie uczyniło nas ekspertami w dziedzinie
 						odzieżowej oraz pozwoliło zdobyć zaufanie klientów.
 						<br/> Oferujemy duży wybór różnego rodzaju bielizny, bieliznę nocną oraz odzież codzienną – zarówno dla kobiet, jak i mężczyzn.</p>
+						<!-- przycisk przejścia -->
 					<a href="#part2" class="btn text-center btn-lg link" target="">
 						<i class="fa fa-chevron-circle-down" style="font-size:48px;color:red"></i>
 					</a>
-					<!-- przycisk przejścia -->
 				</div>
 				<div class="mt-3 col-lg-6 col-md-12">
 					<img class="img-fluid d-block w-100 mx-auto animate-in-right" src="<?php echo ROOT_URL; ?>assets/img/man.jpg" width="100"
@@ -38,8 +38,6 @@
 		</div>
 	</div>
 	<hr class="mt-0" width="70%">
-
-
 	<div class="py-2" id="part2">
 		<div class="container about">
 			<div class="row py-5" id="part3">
