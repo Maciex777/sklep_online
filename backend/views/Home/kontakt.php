@@ -1,4 +1,5 @@
 <!-- Główna treść strony -->
+	<img id="contact-background" src="<?php echo ROOT_URL; ?>assets/img/kontakt-background.jpg" alt=""/>
 	<main class="fade-in">
 		<div class="container">
 			<div class="row contact-page">
