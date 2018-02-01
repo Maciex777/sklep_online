@@ -19,7 +19,7 @@
 			</div>
 		</div>
 	</div>
-	<hr class="mt-0" width="70%">
+	<hr class="mt-0">
 	
 	<!-- Sekcja 2 -->
 	<div class="py-2" id="part2">
@@ -32,7 +32,7 @@
 					<a type="button" href="#part3" class="btn read-more text-center btn-lg px-4 mt-4" target="">Czytaj dalej<i class="fa fa-chevron-down pl-3"></i></a>
 				</div>
 				<div class="col-lg-5 order-2 order-lg-1 order-sm-2">
-					<img class="img-fluid d-block my-3 w-100 mx-auto about-photos" src="<?php echo ROOT_URL; ?>assets/img/woman1.jpg">
+					<img class="img-fluid d-block my-3 w-100 mx-auto" src="<?php echo ROOT_URL; ?>assets/img/woman1.jpg">
 				</div>
 			</div>
 		</div>
