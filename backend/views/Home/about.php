@@ -3,7 +3,7 @@
 			<div class="container about">
 			<div class="row pb-5  mt-xl-5 pt-xl-5">
 				<div class="col-md-5 order-md-2">
-					<img src="<?php echo ROOT_URL; ?>assets/img/man.png" alt="O sklepie" class="img-fluid pb-3 pt-5">
+					<img src="<?php echo ROOT_URL; ?>assets/img/man.jpg" alt="O sklepie" class="img-fluid pb-3 pt-5">
 				</div>
 				<div class="col-md-7 order-md-1 text-justify">
 					<h1 class="heading-font mt-xl-2 pt-xl-2 pb-4 pl-4">O sklepie</h1>
@@ -14,14 +14,14 @@
 			</div>
 			<div class="row pb-5  mt-xl-5 pt-xl-5">
 				<div class="col-md-5 order-md-1">
-					<img src="<?php echo ROOT_URL; ?>assets/img/lady.jpg" alt="O sklepie" class="img-fluid pb-3 pt-5">
+					<img src="<?php echo ROOT_URL; ?>assets/img/material.jpg" alt="O sklepie" class="img-fluid pb-3 pt-5">
 				</div>
 				<div class="col-md-7 order-md-2 text-justify">
 							<p>
 							Sklep powstał z myślą przede wszystkim o seniorach, dlatego większość towarów dedykowana jest dla osób starszych. Ale dzięki szerokiemu asortymentowi osoby w każdym wieku znajdą coś dla siebie.
 							</p>
 				</div>
-			</div>		
+			</div>
 			<div class="row pt-5">
 				<div class="col-md-5 order-md-2">
 					<img src="<?php echo ROOT_URL; ?>assets/img/woman.jpg" alt="Oferta" class="img-fluid pb-3">

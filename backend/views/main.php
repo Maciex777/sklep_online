@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Halka</title>
   <!-- STYLESHEET META -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
@@ -79,8 +79,9 @@
 									<span class="navbar-toggler-icon"></span> MENU
 								</button>
 								<div class="navbar-collapse collapse" id="collapsibleNavbar">
-									<ul class="nav navbar-nav">
-									<li class="dropdown menu-large nav-item"><a href="<?php echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
+									 <ul class="nav navbar-nav">
+										 <?php include("./views/menu.php"); ?>
+								<!--	<li class="dropdown menu-large nav-item"><a href="<?php //echo ROOT_URL; ?>sklep/kategoria/9" class="nav-link dropdown-toggle">Pani</a>
 										<ul class="dropdown-menu megamenu my-dropdown-menu">
 											<div class="row">
 											<li class="col-md-3">
@@ -149,7 +150,7 @@
 											</div>
 											</ul>
 									</li>
-									<li class="dropdown menu-large nav-item"><a href="<?php echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
+									<li class="dropdown menu-large nav-item"><a href="<?php //echo ROOT_URL; ?>sklep/kategoria/1" class="nav-link dropdown-toggle">Pan</a>
 										<ul class="dropdown-menu megamenu my-dropdown-menu">
 											<div class="row">
 											<li class="col-md-3">
@@ -218,8 +219,8 @@
 											</div>
 											</ul>
 									</li>
-									 <li class="nav-item menu-large"><a href="<?php echo ROOT_URL; ?>home/about" class="nav-link">O sklepie</a></li>
-									 <li class="nav-item menu-large"><a href="<?php echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li>
+									 <li class="nav-item menu-large"><a href="<?php //echo ROOT_URL; ?>home/about" class="nav-link">O sklepie</a></li>
+									 <li class="nav-item menu-large"><a href="<?php// echo ROOT_URL; ?>home/kontakt" class="nav-link">Kontakt</a></li> -->
 									</ul>
 								</div>
 							</div> 	<!-- koniec containera -->
