@@ -55,7 +55,7 @@
 					<div class="pt-4" id="count_in_cart_div">
 					<?php if (isset($_SESSION['cart']) && isset($_SESSION['cart'][$viewmodel['product_id']]) && !$_SESSION['cart'][$viewmodel['product_id']] == null){ ?>
 						W koszyku: &nbsp;<strong id="count_in_cart"> <?php echo $_SESSION['cart'][$viewmodel['product_id']]; ?></strong>
-					</div><?php } ?>
+					<?php } ?></div>
 					<a type="button" href="<?php echo ROOT_URL; ?>sklep/koszyk" class="btn my-button standard-buttons btn-lg px-5 py-2 mt-4" >Przejdź do koszyka</a>
 				</div>
 			</div>

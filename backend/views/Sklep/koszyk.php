@@ -13,7 +13,9 @@
 							<th class="column-4 col-4 col-md-2">Ilość</th>
 							<th class="column-5 col-4 col-md-2">Suma</th>
 						</tr>
+
 <?php foreach($viewmodel as $item){?>
+
 						<tr class="table-row">
 							<td class="column-1 col-6 col-md-3">
 							<div class="row">
@@ -30,19 +32,13 @@
 							<td class="column-3 col-4 col-md-2"><?php echo $item['product_cost']; ?> zł</td>
 							<td class="column-4 col-4 col-md-2">
 								<div>
-									<!-- <button>
-										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
-									</button> -->
-									<div class="quantity_selector">
-										<!-- <span class="minus"  data-id="<?php //echo $item['product_id']; ?>" data-price="<?php //echo $item['product_cost'];?>" data-count="<?php //echo $_SESSION['cart'][$item['product_id']]; ?>"><i class="fa fa-minus"  aria-hidden="true"></i></span> -->
-										<span class="quantity_value" ><?php echo $_SESSION['cart'][$item['product_id']]; ?></span>
-										<!-- <span class="plus"  data-id="<?php //echo $item['product_id']; ?>" data-price="<?php //echo $item['product_cost'];?>" data-count="<?php //echo $_SESSION['cart'][$item['product_id']]; ?>"><i class="fa fa-plus"   aria-hidden="true"></i></span> -->
-									</div>
-									<!-- <input class="t-center num-product" type="text" name="num-product1" value="<?php //echo $_SESSION['cart'][$item['product_id']]; ?>" readonly="readonly"> -->
 
-									<!-- <button>
-										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
-									</button> -->
+									<div class="quantity_selector">
+
+										<span class="quantity_value" ><?php echo $_SESSION['cart'][$item['product_id']]; ?></span>
+
+									</div>
+
 								</div>
 							</td>
 							<td class="column-5 col-4 col-md-2"><?php echo $_SESSION['product_value'][$item['product_id']]; ?> zł</td>
@@ -135,18 +131,12 @@
 		   });
 
 		});
-		// $("#minus").click(function(){
-		// 	var quantity = parseInt($("#quantity_value").text());
-		// 	quantity--;
-		// 	if (quantity<=0){quantity = 1;}
-		// 	$("#quantity_value").text(quantity);
-		// })
+
 		$(".delete").click(function(){
 			var id_now = $(this).attr("data-id");
 			var price_now = $(this).attr("data-price");
 			var count_now = $(this).attr("data-count");
-			//this.fadeOut();
-			//alert(id);
+			
 			$.ajax({
 				  type: 'POST',
 	        url: '<?php echo ROOT_URL; ?>views/Sklep/DelFromCart.php',
