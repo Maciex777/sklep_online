@@ -336,6 +336,28 @@ header .logo img:hover {
   transform: scale(1.05);
 }
 
+/* Strona O Sklepie */
+/* 
+.jumbotron {
+	background-color: #FFFFFF;
+}
+.jumbotron h1 {
+	font-weight: bold;
+	color: #444444;
+}
+.jumbotron p {
+	color: #444444;
+	text-align: justify;
+	text-justify: inter-word;
+	font-size: 1.3em !important;
+} */
+.about h1 {
+	font-weight: bold;
+	color: #444444;
+}
+
+
+
 /*wygląd przycisków*/
 .my-button{
 	font-family:'Open Sans';
