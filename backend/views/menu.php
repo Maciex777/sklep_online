@@ -24,7 +24,7 @@ class Menu {
 //wyswietlnie kodu html dla rodzica aby mial rozwijane podmenu
     echo    "
     <li class=\"dropdown menu-large nav-item\" id=\"js-menu-".strtolower($menu_item['main'])."\"><a href=\"". ROOT_URL.$menu_item['link'].$menu_item['id_in_child']."\" class=\"nav-link dropdown-toggle\">".$menu_item['main']."</a>
-          <ul class=\"dropdown-menu megamenu my-dropdown-menu\" id=\"js-dropdown-".strtolower($menu_item['main'])."\">
+          <ul class=\"dropdown-menu megamenu my-dropdown-menu fade-in\" id=\"js-dropdown-".strtolower($menu_item['main'])."\">
             <div class=\"row\">";
             //wywolanie funkcji wyswietlajacej podmenu
             $this->subMenu($menu_item['id_in_child'],$db);

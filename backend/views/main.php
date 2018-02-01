@@ -2,19 +2,18 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Halka</title>
+	<title>Halka - sklep z odzieżą dla seniorów</title>
+	<meta name="description" content="Sklep on-line z odzieżą dla starszych osób.">
   <!-- STYLESHEET META -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;subset=latin-ext" rel="stylesheet"> 
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/font-awesome.css">
 	<link rel="stylesheet" href="<?php echo ROOT_URL; ?>assets/css/styles.css">
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
   <!-- JS META -->
   <script src="<?php echo ROOT_URL; ?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo ROOT_URL; ?>assets/js/main_script.js"></script>
 
 </head>
 <body>
@@ -79,9 +78,8 @@
 									<span class="navbar-toggler-icon"></span> MENU
 								</button>
 								<div class="navbar-collapse collapse" id="collapsibleNavbar">
-									 <ul class="nav navbar-nav">
-										 <?php include("./views/menu.php"); ?>
-
+									<ul class="nav navbar-nav">
+									 <?php include("./views/menu.php"); ?>
 									</ul>
 								</div>
 							</div> 	<!-- koniec containera -->
@@ -93,8 +91,8 @@
 	</header> <!-- koniec nagłówka -->
 
 		<?php require($view); ?>
-
-<!-- Stopka -->
+		
+<!-- Stopka -->		
 <footer>
 		<div class="container text-center text-md-left pt-5">
 			<div class="row pt-4">
@@ -119,7 +117,7 @@
 				</div>
 			  </div>
 			  <div class="col-md-4 col-sm-12">
-				<!--Column1-->
+				<!--Column2-->
 				<div class="footer-pad">
 				  <h4>Katalog produktów</h4>
 				  <ul class="list-unstyled">
@@ -129,7 +127,7 @@
 				</div>
 			  </div>
 			  <div class="col-md-4 col-sm-12">
-				<!--Column1-->
+				<!--Column3-->
 				<div class="footer-pad">
 				  <h4>Informacje o sklepie</h4>
 				  <ul class="list-unstyled">
@@ -147,60 +145,12 @@
 				<div class="col-12 py-4 text-center">
 					<p> <strong>&copy; Halka 2018</strong></p>
 				</div>
-			</div>
+			</div>			
 	</div>
 </footer>
 
 <!-- Strzałka przekierowująca do góry -->
 <button id="myBtn" title="Go to top"></button>
-<script>
-$(document).ready(function(){
-
-$.ajax({
-
-url : "<?php echo ROOT_URL;?>views/koszyk.php",
-type: "post",
-dataType: 'json',
-success : function(response) {
-//alert(Object.keys(response).length)
-$.each(response,function(i, value){
-	var cart_item;
-	 cart_item = "<div class=\"row item\"><div class=\"col-5\"><img class=\"img-fluid d-flex flex-column\" alt=\""+value['product_name']+"\" src=\"<?php echo ROOT_URL; ?>"+value['product_image']+"\" /></div><div class=\"col-7\"><p class=\"h5 text-right\">"+value['product_name']+"</p><p class=\"text-right\"><b class=\"count-item\"></b><b>"+value['product_cost']+"zł</b></p></div></div>";
-	 $("#mini-cart").append(cart_item);
-});
-}
-});
-});
-
-
-$(window).scroll(function() {
-	if ( $(window).scrollTop() > amountScrolled ) {
-		$('#myBtn').fadeIn('slow');
-	} else {
-		$('#myBtn').fadeOut('slow');
-	}
-});
-
-
-//strzałka przekierowywująca na samą górę
-var amountScrolled = 300;
-
-$(window).scroll(function() {
-	if ( $(window).scrollTop() > amountScrolled ) {
-		$('#myBtn').fadeIn('slow');
-	} else {
-		$('#myBtn').fadeOut('slow');
-	}
-});
-
-//przekierowanie na górę po kliknięciu na strzałkę
-$(document).on('click','#myBtn', function(){
-	$('html, body').animate({
-		scrollTop: 0
-	}, 700);
-	return false;
-});
-</script>
 
 <script src="<?php echo ROOT_URL; ?>assets/js/popper.min.js"></script>
 <script src="<?php echo ROOT_URL; ?>assets/js/bootstrap.min.js"></script>
