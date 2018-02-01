@@ -41,7 +41,7 @@ body{
 }
 
 .megamenu {
-  padding: 20px 20px;
+  padding: 20px;
   width:100vw;
   left:-25%;
   
@@ -49,10 +49,7 @@ body{
 }
 @media screen and (min-width: 1000px) {
 .megamenu {
-  padding: 20px 20px;
-  width:100vw;
   left:-35%;
-  opacity:.97;
 }
 }
 
@@ -103,6 +100,15 @@ body{
   color: #E8E8E8;
   font-size: 1.4em;
   font-weight:600;
+  padding:10px 0;
+}
+
+.megamenu div li ul{
+	padding:15px 0;
+}
+
+.megamenu div{
+	padding:10px 0 25px 0;
 }
 
 @media (max-width: 767px) {
@@ -440,12 +446,14 @@ header .logo img:hover {
 
 /*nagłówek zakładek kategori i produktów*/
 .category-title{
-		border-top:1px solid silver;
-		letter-spacing:1px; 
-		font-weight:900; 
-
+	border-top:1px solid silver;
+	letter-spacing:1px; 
+	font-weight:900; 
 }
-
+.category-title h2 a:hover, .category-title h3 a:hover{
+	color:#9e6600;
+}
+	
 /*znikanie bocznego obrazu pani lub pana w kategoriach i produktach*/
 @media only screen and (max-width: 992px) {
 .side-image{
