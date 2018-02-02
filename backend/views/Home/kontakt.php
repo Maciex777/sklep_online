@@ -42,7 +42,7 @@
 						<div class="row">							
 							<div class="col-md-6 text-md-left">
 								<div class="form-group">
-									<label for="email" class="pt-1 pl-2 font-weight-bold">Email <span class="text-muted"> *</span></label>
+									<label for="email" class="pt-1 pl-2 font-weight-bold">Email</label>
 									<input type="email" id="email" class="form-control" name="email" placeholder="Podaj email" required="required" value="<?php if (isset($_SESSION['is_logged_in']) && $_SESSION['is_logged_in'] === true){echo $_SESSION['user_data']['email'];} ?>">
 								</div>
 							</div>
@@ -56,9 +56,8 @@
 						<div class="row">									
 							<div class="col-md-12 text-md-left">
 								<input hidden="hidden" type="text" name="form_type" value="kontakt">
-								<div class="col-md-12 text-left"><input type="submit" name="submit" value="Wyślij wiadomość" class="btn my-button standard-buttons btn-block submit"></div>
+								<div class="col-md-12 text-left mt-4"><input type="submit" name="submit" value="Wyślij wiadomość" class="btn my-button standard-buttons btn-block submit"></div>
 							</div>
-							<h6 class="text-muted text-left p-3">* Pole opcjonalne - podaj swój adres e-mail, a wyślemy Ci wiadomość weryfikującą przychodzące połączenie telefoniczne</h6>
 						</div>
 					</form>
 				  </div>
