@@ -62,24 +62,7 @@ $(".submit").click(function(){
 		alert("Dziękujemy za wysłanie prośby o kontakt. Proszę oczekiwać kontaktu telefonicznego.")
 })
 
-//asynchroniczne dodawanie do koszyka
-$(document).ready(function(){
 
-$.ajax({
-
-url : "<?php echo ROOT_URL;?>views/koszyk.php",
-type: "post",
-dataType: 'json',
-success : function(response) {
-//alert(Object.keys(response).length)
-$.each(response,function(i, value){
-	var cart_item;
-	 cart_item = "<div class=\"row item\"><div class=\"col-5\"><img class=\"img-fluid d-flex flex-column\" alt=\""+value['product_name']+"\" src=\"<?php echo ROOT_URL; ?>"+value['product_image']+"\" /></div><div class=\"col-7\"><p class=\"h5 text-right\">"+value['product_name']+"</p><p class=\"text-right\"><b class=\"count-item\"></b><b>"+value['product_cost']+"zł</b></p></div></div>";
-	 $("#mini-cart").append(cart_item);
-});
-}
-});
-});
 
 // $("#add_to_cart").click(function(){
 // 	var product_cost = <?php //echo $viewmodel['product_cost'];?>;
